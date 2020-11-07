@@ -1,0 +1,1239 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{float}
+\usepackage{pifont}
+\usepackage[colorlinks=true,linkcolor=blue,allcolors=blue]{hyperref}%
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{marvosym}
+\usepackage{fontawesome}
+\usepackage{enumitem}
+\usepackage{lineno}
+\usepackage{mathpazo} % Palatino font
+\usepackage{newpxtext,newpxmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{bigints}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{relsize}
+\usepackage{mathtools}
+\usepackage{subcaption}
+\usepackage[utf8x]{inputenc}
+\usepackage{flexisym}
+\usepackage{cite}
+\usepackage{siunitx}   %For degree
+\usepackage{IEEEtrantools}
+\usepackage{amsmath, float}      % for \tag and \eqref macros\\
+\usepackage{tgschola}
+\usepackage{ amssymb }
+\usepackage{ esint }
+\usepackage{float}
+\usepackage{empheq}  %boxed over two equ.
+\usepackage[T1]{fontenc}
+\usepackage[titletoc]{appendix}
+\usepackage{epigraph}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\usepackage{titlesec}
+\usepackage{wrapfig} %for wrap text around images
+\usepackage[margin=0.9in]{geometry} %margin-------------margin
+%\DeclareUnicodeCharacter{00A0}{ }
+\usepackage{cellspace}
+\setlength{\cellspacetoplimit}{3pt}
+\setlength{\cellspacebottomlimit}{3pt}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+\makeatletter
+\titleformat{\part}[display]
+  {\Huge\scshape\filright}
+  {\partname~\thepart:}
+  {20pt}
+  {\thispagestyle{epigraph}}
+\makeatother
+\setlength\epigraphwidth{.6\textwidth}
+
+ 
+%\usepackage[printwatermark]{xwatermark}
+%\newwatermark[allpages,color=red!50,angle=45,scale=1,xpos=0,ypos=0]{The Cosmological Cafe}
+%\usepackage[font=small,labelfont=bf,tableposition=top]{caption}
+
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+\newcommand\vertarrowbox[3][6ex]{%
+  \begin{array}[t]{@{}c@{}} #2 \\
+  \left\uparrow\vcenter{\hrule height #1}\right.\kern-\nulldelimiterspace\\
+  \makebox[0pt]{\scriptsize#3}
+  \end{array}%
+}
+\begin{document}
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	\center % Centre everything on the page
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+%	First Draft
+%	\textsc{\LARGE Department of Physics \& Astrophysics \vspace{1mm}\\ University of Delhi}\\[1.5cm] % Main heading such as the name of your university/college
+	
+	\textsc{\Large }\\[0.5cm] % Major heading such as course name
+	
+	\textsc{\large }\\[0.5cm] % Minor heading such as course title
+	
+	%------------------------------------------------
+	{\color{red}{\huge \textbf{Ph.D. Confirmation Report-2020}}}
+	\vspace{4mm}\\
+	{\textsc{(PHYS602 Literature Survey, Scientific Writing and Presentations)}}
+	%------------------------------------------------
+	\vspace{10mm}\\
+	\HRule\\[0.1cm]
+	{\huge\bfseries Cosmology with Strong Gravitational Lensing Systems.}\\[0.0cm] % Title of your document
+	\HRule\\[1.5cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+%	\textbf{Keywords}:{\footnotesize Distance Sum Rule, Strong Gravitational Lensing, Distance Ratio, Time-Delay Distance, SNIa and GRB dataset, Lens profiles, Cosmic Distance Duality Relation}
+	\vspace{8mm}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{\textbf{Candidate Name}}
+			\vspace{2mm}\\
+			 \textsc{Darshan Kumar} % Your name
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{\textbf{Supervisors}}\\
+			\textsc{{ Dr. Deepak Jain \\ Prof. Shobhit Mahajan}} % Supervisor's name
+		\end{flushright}
+	
+	\end{minipage}
+%	\begin{center}
+%	\large
+%		\textit{\textbf{Collaborators}}\\
+%			 \textsc{Prof Amitabha Mukherjee} 
+%	\end{center}
+	% If you don't want a supervisor, uncomment the two lines below and comment the code above
+	%{\large\textit{Author}}\\
+	%John \textsc{Smith} % Your name
+	
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	\vfill % Position the date 3/4 down the remaining page
+
+%\end{center}
+	% Date, change the \today to a set date if you want to be precise
+	
+	%------------------------------------------------
+	%	Logo
+	{\includegraphics[scale=0.14]{du_logo}}
+	\vspace{2mm}\\
+	%------------------------------------------------
+ {Department of Physics and Astrophysics, University of Delhi, Delhi-110007}
+ \vspace{2mm}\\
+	%\vfill\vfill
+	%\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo - this will require the graphicx package
+	 
+	%----------------------------------------------------------------------------------------
+	{\large\today} 
+	\vfill % Push the date up 1/4 of the remaining page
+	
+\end{titlepage}
+\abstract{Strong gravitational lensing along with the distance sum rule method can constrain both cosmological parameters as well as density profiles of galaxies without assuming any fiducial cosmological model. To constrain galaxy parameters and cosmic curvature, we use a newly compiled database of  $161$ galactic scale strong lensing systems for distance ratio data. For the luminosity distance in the distance sum rule method, we use databases of supernovae type-Ia (Pantheon) and Gamma Ray Bursts (GRBs). We use three kind of lens model, Singular Isothermal Spherical (SIS), Power Law Spherical (PLS) and Extended Power Law (EPL) lens models. In SIS lens profile, our constraint on $\Omega_{k0}$ is incompatible with the Planck result. For the PLS lens profile, the constraint on the cosmic curvature parameter is consistent with a flat universe at 95\% confidence level. Further we consider three parameterisations of density power law index in EPL lens model. In all parameterisations, the best value of $\Omega_{k0}$ suggests a closed universe, though a flat universe is accommodated at $68\%$ confidence level. We find that parametrisations of $\gamma$ have a negligible impact on the best fit value of the  cosmic curvature parameter.\\
+Furthermore, measurement of time delay can provide a promising cosmographic probe via the ``time delay distance" that includes the ratio of distances between the observer, lens and the source. We use the distance sum rule method with $12$ datapoints double-imaged lensed dataset and H0LiCOW dataset of 6 lenses for time-delay distance to put constraints on the Cosmic Distance Duality Relation (CDDR) and the cosmic curvature parameter. For this we consider three different parametrisation of distance duality parameter $(\eta)$. Using both dataset, the best fit value of $\Omega_{k 0}$ indicate that an open universe is preferred. But a flat universe can be accommodated at $95 \%$ confidence level if $\eta$ is assumed to be redshift dependent. Further, we find that at $95 \%$ confidence level, there is no violation of CDDR with all parametrisation of $\eta$.}
+\tableofcontents 
+\newpage
+%\part{Strong Gravitational Lensing: Distance Ratio}
+\chapter{Cosmology Overview}
+\section{Introduction}
+Origin of the cosmology word is Greek. The word \textit{Cosmo} means  order or world and \textit{logia} means study. It is the study of the universe, or cosmos as a whole. It's aim is to use the scientific method to understand the origin, evolution and ultimate future of the entire Universe. Cosmology involves the formation of theories or hypotheses about the universe which make specific predictions for phenomenon that can be tested with observations. Basically cosmology deals with questions which are fundamental to the human condition, i.e. Where do we come from? What we are? Where are we going? Cosmology struggle with these questions by describing the past, explaining the present, and predicting the future of the universe\footnote{\url{https://en.wikipedia.org/wiki/Where_Do_We_Come_From}}
+
+Einstein's theory of general relativity is the most important theoretical concept in the area of gravitation, which describing a convincing explanation of space, time and matter at a macroscopic level. Furthermore, in the world of cosmology, the greatest consequence of this theory occurs, since it is the natural field of the gravity field, it opens up new measuring and modelling opportunities. In this chapter, we will discuss the key pillers of comsology.
+
+
+\section{Cosmological Principle}
+In science, the structure of any theory depends on some fundamental axioms or principles. In the same way, cosmology is based on the fundamental axioms or principle of simplicity, namely, cosmological principle, which state that on large scales the universe is assumed to be uniform. Basically, this makes the universe to be a simple to understand. This principle of simility is referred as the cosmological principle and a large portion of cosmology theory is based on cosmological principle. The cosmological principle is that the universe is spatially homogeneous and isotropic on large scale order of roughly 150 Mpc or more. Saying that the universe is isotropic means that there is no preferred directions in the universe. And the universe is homogeneous means that there is no preferred locations in the universe \cite{rk2000}. The assumptions of large scale homogeneity and isotropic appears to be an accurate description of our universe \cite{jc2014}.\\
+\section{The Friedmann-Lema\^itre-Robertson-Walker Metric.}
+In physics, spacetime is a quantity that consists of the three dimensions of space and the one dimension of time into a single four-dimensional continuum. As we can calculate the distance between two points is space using Euclidean approach for that space, in the same fashion as we can calculate four-dimensional distance between two events in space-time  i.e. consider two events, one occurring at space-time location (t, r, $\theta , \phi$ ) and another one at (t+dt,r+dr,$\theta +d\theta ,\phi +d\phi$). According to the laws of special relativity, the space-time separation between these two events can be given as\\
+\begin{IEEEeqnarray}{rCl}\label{eq:ds2}
+    $$ds^{2}=-c^{2}dt^{2}+dr^{2}+r^{2}d\Omega^{2}.$$
+\end{IEEEeqnarray}
+where $d\Omega^{2}=d\theta^2+sin^2\theta d\phi^2$ \\
+The metric given by this eq.(\ref{eq:ds2}) is called  Minkowski metric,
+and the space-time which it describes is called Minkowski space-time.  When gravity is added the space-time it becomes more interesting. In the 1930, the physicist Howard Robertson and Arthur Walker asked ``what form of space-time metric assume if the universe is spatially homogeneous and isotropic at all time, and distances are allowed to expand or contract as a function of time ?" The metric derived by them independently is called Friedmann-Lemaitre-Robertson-Walker metric (FLRW metric) generally written as
+\begin{IEEEeqnarray}{rCl}\label{eq:ds2c}
+$$ds^{2}=-c^{2}dt^2+a(t)^{2}\left[\dfrac{dr^{2}}{1-kr^{2}}+r^{2}d\theta^{2}+r^{2} \sin^{2} \theta d\phi^{2}\right]$$
+\end{IEEEeqnarray}
+In this metric the scale factor describe how distances expand or
+contract with time in homogeneous and isotropic universe. It is normalised such that a($t_0$)=1 ; where $t_0$ stands for the present epoch.\\
+The other variable in FLRW metric is `$k$' is a curvature
+term which is a dimensionless number. 
+$$k=\left\{\begin{array}{cc}{-1} & {\text { Open universe (Negative spatial curvature) }} \\ {0} & {\text { Flat universe (Zero spatial curvature) }} \\ {+1} & {\text { Close universe (Positive spatial curvature) }}\end{array}\right.$$
+\subsection{Einstein's Equation.}
+Important benchmark in the early history of general theory of relativity were the Einstein Field equations. These equations is also referred as the field equations of gravitation or gravitation field equations. General theory of relativity describes the fundamental interac- tion of gravitation as a result of space-time curved by matter and energy. In 1915 Albert Einstein published a tensor form of Einstein field equations which equates local space-time curvature to the local energy and momentum with that space-time \cite{ae1915}.
+%In 1905, Albert Einstein determined the laws of physics are  same for all non-accelerating observers, and that the speed of light in a vacuum was independent of the motion of all observers. This was the theory of special relativity: a new framework for all of physics and proposed new concepts of space and time. Then Einstein trying to include acceleration in the theory. After 10 year he published his theory of general relativity in 1915. This theory is that space and time can wrap into each other.\\ 
+Einstein gave the relation between matter and geometry of space-time as given below
+ \begin{IEEEeqnarray}{rCl}\label{eq:gmunu}
+ $${G_{\mu\nu}=\dfrac {8\pi G}{c^{4}} T_{\mu\nu}}$ $
+ \end{IEEEeqnarray}
+ \begin{IEEEeqnarray}{rCl}\label{eq:gmunuo}
+ $$G_{\mu\nu} = R_{\mu\nu}-\dfrac{1}{2} Rg_{\mu\nu}+\Lambda g_{\mu\nu}$ $
+  \end{IEEEeqnarray}
+where, $R_{\mu\nu}$ is Ricci tensor and $R$ is Ricci scalar and these terms are given by contracting the Riemannian tensor $R_{\mu\nu\lambda\delta}$. The $\Lambda$ is cosmological constant, which was originally introduced by Albert Einstein, becuase he believed that the universe is static and everlasting. On the right hand side of the eq.(\ref{eq:gmunu}), $T_{\mu\nu}$  energy momentum stress tensor. It tells about how the matter is distributed in the universe. The left-hand side of this equation describes the curvature of space-time whose effect understand as the gravitational force ( it is analogue of the term F in Newton's equation). The tensor G$_{\mu\nu}$ is called Einstein tensor.  \\
+There is one term that we have left out so far: The cosmological constant term $\Lambda$g$_{\mu\nu}$. This term is sometimes put on other side of the equation, as $\Lambda$ can be seen as some kind of ``energy content" of the universe. This term is mainly of interest because it provide a possible explanation for the dark energy\cite{ag1998,sp1998}.   \\
+ \subsection{Energy-Momentum Tensor}
+According to Einstein equation
+\begin{IEEEeqnarray}{rCl}\label{eq:rmunu}
+    $$ R_{\mu\nu}-\dfrac{1}{2} Rg_{\mu\nu}+\Lambda g_{\mu\nu}=\dfrac{8\pi G}{c^2} T_{\mu\nu}$$
+    \end{IEEEeqnarray}
+Here $T_{\mu\nu}$ is Energy-momentum tensor. For a perfect fluid $T^{\mu}_{\nu}$:
+\begin{IEEEeqnarray}{rCl}\label{eq:tmunu}
+    $$T^{\mu}_{\nu}=\left(\dfrac{P}{c^2}+\rho\right)u^{\mu}v_{\nu}+Pg^{\mu}_{\nu}$$
+    \end{IEEEeqnarray}
+Energy-Momentum tensor gives the details of energy density and
+momentum in spacetime. It is a tensor of second rank. In a rest frame, the four velocity components are
+\begin{center}
+     $u^{\mu}=(c,0,0,0)$
+\end{center}
+In the metric form $T^{\mu}_{\nu}$ is given by
+$$\left|\begin{array}{cccc}{\rho c^2} & {0} & {0} & {0} \\ {0} & -P & {0} & {0} \\ {0} & {0} & -P & {0} \\ {0} & {0} & {0} & -P\end{array}\right|$$
+and trace of this metric is given by, $\rho c^2-3P$. For the radiation because $T^{\mu}_{\nu}$ is traceless quantity. This implies that $P=\dfrac{\rho c^{2}}{3}$.\\
+\subsection{Friedmann Equations.}
+We describe the universe in four-dimensional space-time. The geometric structure of the space-time, which is homogeneous and isotropic, is describe by the Friedmann-Lema\^itre-Robertson-Walker metric (FLRW metric).\\
+Einstein's equation is given by
+ \begin{center}
+     $G_{\mu\nu}+\Lambda g_{\mu\nu}=\dfrac {8\pi G}{c^{4}} T_{\mu\nu}$ 
+\end{center}
+only non-zero components of Einstein Tensor are
+$$
+\begin{array}{l}
+G_{00}=3\left[\left(\dfrac{\dot{a}}{a}\right)^{2}+\dfrac{k c^{2}}{a^{2}}\right]-\Lambda c^2 \\
+G_{i j}=\left[2 \dfrac{\ddot{a}}{a}+\left(\dfrac{\dot{a}}{a}\right)^{2}+\dfrac{k c^{2}}{a^{2}}-\Lambda c^2\right] g_{i j}
+\end{array}
+$$
+If the Einstein General Theory of Relativity is correct, the evolution of scale factor ($a$) with time is given by Friedmann equations, which is derived from 00 component of the Einstein's equations
+\begin{IEEEeqnarray}{rCl}\label{eq:3dota}
+$$3\dfrac{\dot{a}^{2}+kc^2}{a^{2}}-\Lambda c^2=8\pi G\rho$$
+\end{IEEEeqnarray}
+From the eq.(\ref{eq:3dota}) and trace of the Einstein's equation\\
+\begin{IEEEeqnarray}{rCl}\label{eq:2ddota}
+    $$2\dfrac{\ddot a}{a}+\dfrac{\dot{a}^{2}+kc^2}{a^{2}}-\Lambda c^2=-\dfrac{8\pi Gp}{c^{2}}$$
+\end{IEEEeqnarray}
+\subsection{The Hubble Parameter}
+The most important information about the scale factor comes to us through the observation of shifts in frequency of light emitted by distant sources. As we know each elements is the periodic table emits photon only at certain wavelengths ($\lambda$).  These photons are responsible for either emission or absorption lines in the spectrum, by measuring the position of these spectral lines, we can determine which elements are present in the object itself or along the line of sight. Astronomer use same analysis, they note that for most astronomical objects, the observed spectral lines are all shifted to longer wavelengths. This is know as `Cosmological Redshift(z)'.\\
+The Hubble parameter, H(z) is one of the most important tool in cosmology to estimate the size and age of the universe. At the present epoch Hubble parameter is known as Hubble-Lema\^itre Constant ($H_0$). The Hubble-Lema\^itre constant is the unit of measurement the expansion of universe. This constant was given by an American astronomer Edwin Hubble in 1929. Hubble-Lema\^itre constant($H_0$) is directly correlation  between distance($d$) to galaxy and recessional velocity($v$):
+\begin{IEEEeqnarray}{rCl}\label{eq:vh0}
+$$v=H_0d$$
+\end{IEEEeqnarray}
+recessional velocity($v$) can be calculated using red-shift formula
+$\left (v=\frac{\lambda_0-\lambda_e}{\lambda_e}c\right)$, where
+$\lambda_0$ is observed wavelength and $\lambda_e$ is emitted
+wavelength . From above relation we can calculate Hubble constant by
+knowing distance s of galaxy and recessional velocity. The unit of the Hubble constant is ``$\text{km sec}^{-1} \text{Mpc}^{-1}$". For example, if we take $H_0$=60 $\text{km sec}^{-1} \text{Mpc}^{-1}$ means a galaxy at a distance 10 Mpc would be moving away from us with radial velocity of 600 $\text{km sec}^{-1}$. \\
+\section{ Some Cosmological Parameters.}
+From Friedmann Equations:
+\begin{IEEEeqnarray}{rCl}\label{eq:3dotak}
+$$3\dfrac{\dot{a}^{2}+kc^2}{a^{2}}-\Lambda c^2=8\pi G\rho$$
+\end{IEEEeqnarray}
+\begin{IEEEeqnarray}{rCl}\label{eq:2ddotad}
+     $$2\dfrac{\ddot a}{a}+\dfrac{\dot{a}^{2}+kc^2}{a^{2}}-\Lambda c^2=-\dfrac{8\pi Gp}{c^{2}}$$ 
+\end{IEEEeqnarray}
+\begin{center}
+$$H=\dfrac{\dot{a}}{a}$$
+ \end{center}
+ In terms of Hubble parameter eq.(\ref{eq:3dotak}) can be written as:
+\begin{center}
+$$3\Bigg(H^2+\dfrac{kc^2}{a^{2}}\Bigg)-\Lambda c^2=8\pi G\rho$$
+\end{center}
+For a flat universe $k=0$. By setting $\Lambda=0$, we define critical density of universe as: 
+\begin{center}
+$\rho_{crit}=\dfrac{3H_0^2}{8\pi G}$
+\end{center}
+The {\textbf{Matter Density Parameter}} defined as the ratio of density of matter to the critical density of the universe i.e.
+\begin{center}
+$\boxed{\Omega_M=\frac{\rho}{\rho_{crit}}}$
+\end{center}
+Rearranging the eq.(\ref{eq:2ddotad}) we get
+\begin{IEEEeqnarray}{rCl}\label{eq:1kaa}
+$$\dfrac{8\pi G\rho}{3H^2}=1+\dfrac{kc^2}{a^2H^2}-\dfrac{\Lambda c^2}{3H^2}$$
+\end{IEEEeqnarray}
+Similarly, we define two more parameter called \textbf{Curvature Density Parameter} and \textbf{Dark Energy Density Parameter}
+\begin{center}
+$\boxed{\Omega_k=-\frac{kc^2}{a^2H^2}}$ \hspace{3cm}   $\boxed{\Omega_{\Lambda}=\frac{\Lambda c^2}{3H^2}}$
+\end{center}
+%\vspace{2mm}\\
+%Where cosmological constant is given by, $\Lambda=4\pi G\rho c^2$\\
+eq.(\ref{eq:1kaa}) can be written as
+\begin{IEEEeqnarray}{rCl}\label{eq:omega}
+$$\boxed{\Omega_{M}+\Omega_{k}+\Omega_{\Lambda}=1}$$
+\end{IEEEeqnarray}
+\vspace{2mm}\\
+eq.(\ref{eq:omega}) indicates that the sum of the total energy density i.e. matter, curvature and Dark energy density parameter is equal to one. \\
+\section{Distances in Cosmology}
+The most basic and difficult measurement in cosmology is distance measurement. The basic aspects is that all distances somehow measure the separation between events. But in the expanding and curved universe, the distances between two objects are constantly changing. Therefore, to measure the distance between objects becomes a very important issue in cosmology. In Cosmology, there are may ways to measure the distance between two events. \\
+We can measure distances by two different sources: 1. Standard Ruler 2. Standard Candle.
+ \subsection{Comoving Distance}
+The comoving distance between two nearby objects in space is defined as the distance between them remains constant in all epoch if the two objects are moving with Hubble Flow. So it is the distance equal to the proper distance multiplied by $(1+z)$. Mathematically, relation between these distances is given below:
+\begin{IEEEeqnarray}{rCl}\label{eq.dist4}
+$$d_{co}=\dfrac{d_p}{\left(\dfrac{a(t)}{a(t_0)}\right)}=(1+z)d_p$$
+ \end{IEEEeqnarray}
+\vspace{1mm}\\
+\textbf{Transverse Comoving Distance:} It is the comoving distance between two events which are separated by some angle $\delta\theta$ on the sky. 
+\vspace{1mm}\\
+In this case, we have to take care of spatial coordinate to define transverse comoving distance.
+\begin{IEEEeqnarray}{rCl}\label{eq.dist8}
+$$d_{co}^t(z)=\left\{\begin{array}{ll}{\dfrac{c}{H_0\sqrt{\Omega_{k 0}}} \sinh \left(\sqrt{\Omega_{k 0}} \displaystyle\int\limits_{0}^{z} \dfrac{d z^{\prime}}{E\left(z^{\prime}\right)}\right)} & {\text { for } \Omega_{k 0}>0} \\ {\dfrac{c}{H_0}\displaystyle\int\limits_{0}^{z} \dfrac{d z^{\prime}}{E\left(z^{\prime}\right)}} & {\text { for } \Omega_{k 0}=0} \\ {\dfrac{c}{H_0\sqrt{-\Omega_{k 0}}} \sin \left(\sqrt{-\Omega_{k 0}} \displaystyle\int\limits_{0}^{z} \dfrac{d z^{\prime}}{E\left(z^{\prime}\right)}\right)} & {\text { for } \Omega_{k 0}<0}\end{array}\right.$$
+\end{IEEEeqnarray}
+\subsection{Angular Diameter Distance}
+Suppose we are observing a standard meter scale instead of a single point in the sky. Conventionally, this meter scale can be treated as an object in a sky which has a proper length $\ell$. Let, meter scale is aligned perpendicular to our line of sight. We can determine the distance of meter scale (which is loacted at redshift $z_e$) from us, as given below
+\begin{IEEEeqnarray}{rCl}\label{eq.dist9}
+$$d_A=\dfrac{\ell}{\delta\theta}$$
+\end{IEEEeqnarray}
+\vspace{1mm}\\
+This distance is known as \textit{angular diameter distance}.  The distance between the two ends of meter scale can be calculated using FLRW metric as given below
+\begin{IEEEeqnarray}{rCl}\label{eq.dist10}
+$$\ell=a_e r \delta\theta$$
+\end{IEEEeqnarray}
+As we already discussed that the comoving distnace with curvature can be defined with $d_{co}^t$. Therefore, the eq.(\ref{eq.dist10}) can be defined as
+\begin{IEEEeqnarray}{rCl}\label{eq.dist11}
+$$\ell=a_e d_{co}^t \delta\theta$$
+\end{IEEEeqnarray}
+Now, using eqs.(\ref{eq.dist9},\ref{eq.dist11}), we can define angular diameter distance as
+\begin{IEEEeqnarray}{rCl}\label{eq.dist12}
+{\boldmath{\boxed{
+$$d_A(z_e)=\dfrac{d_{co}^t}{1+z_e}$$}}}
+\end{IEEEeqnarray}
+\subsection{Luminosity Distance}
+Suppose, we have some astronomical objects which have same absolute luminosity distance throughtout the spacetime. This kind of objects can be used to determine the distances (or more precisely luminosity distance) of a far away object and this method is called \textit{standard candle method}. We can define a relation between observed flux and luminosity as shown below
+\begin{IEEEeqnarray}{rCl}\label{eq.distl1}
+$$d_L=\left(\dfrac{L}{4\pi\mathcal{F}}\right)^{1/2}$$
+\end{IEEEeqnarray}
+Let the observed absolute luminosity observed at redshift $z=0$ is $L_{0}$ and the absolute luminosity $L_e$ of the source is luminosity that were emitted at a redshift $z$. Then flux we can define as below
+\begin{IEEEeqnarray}{rCl}\label{eq.distl2}
+$$\begin{aligned} \mathcal{F} &=\dfrac{L_e}{4 \pi d_{L}^{2}}=\dfrac{L_{0}}{4 \pi\left(a_{0}d_{co}^t\right)^{2}} \vspace{1mm}\\ & \Rightarrow \quad d_{L}^{2}=\left(a_{0} d_{co}^t\right)^{2} \dfrac{L_e}{L_{0}} \end{aligned}$$
+\end{IEEEeqnarray}
+\vspace{1mm}\\
+From eq.(\ref{eq.distl2}) we can make a statement that once we calculate the ratio of absolute luminosity at redshift $z=0$ and $z$, then we easily calculate the luminosity distance. \\
+From a distant object energy $\Delta E_e$ is emitted in time interval $\Delta t_e$, then $L_e$ can be written as
+\begin{IEEEeqnarray}{rCl}\label{eq.distl3}
+$$L_e=\dfrac{\Delta E_{e}}{\Delta t_{e}}$$
+\end{IEEEeqnarray}
+In the same way, we can write  $L_0$ as below
+\begin{IEEEeqnarray}{rCl}\label{eq.distl4}
+$$L_0=\dfrac{\Delta E_{0}}{\Delta t_{0}}$$
+\end{IEEEeqnarray}
+Therefore, 
+\begin{IEEEeqnarray}{rCl}\label{eq.distl8}
+$$\dfrac{L_e}{L_0}=\left(1+z\right)^2$$
+\end{IEEEeqnarray}
+\vspace{1mm}\\
+Finally, we can write eq.(\ref{eq.distl2}) using eq.(\ref{eq.distl8}) as given below:
+\vspace{2mm}\\
+$$d_L^2=\left(d_{co}^t\right)^2\left(1+z\right)^2$$
+Hence,
+\begin{IEEEeqnarray}{rCl}\label{eq.distl9}
+{\boldmath{\boxed{
+$$d_L=\left(d_{co}^t\right)\left(1+z\right)$$}}}
+\end{IEEEeqnarray}
+Now we can compare all distances in a single formula as below\\
+\begin{large}
+$${\boldmath{\boxed{
+d_{A}(z)=\dfrac{d_{c o}^{t}}{(1+z)}=\dfrac{d_{L}(z)}{(1+z)^{2}}=\left\{\begin{array}{cc}\dfrac{c}{(1+z) H_{0} \sqrt{\Omega_{k 0}}} \sinh \left(\sqrt{\Omega_{k 0}} \displaystyle\int\limits_{0}^{z} \dfrac{d z^{\prime}}{E\left(z^{\prime}\right)}\right) & \text { for } \Omega_{k 0}>0 \\ \dfrac{c}{(1+z) H_{0}}\displaystyle\int\limits_{0}^{z} \dfrac{d z^{\prime}}{E\left(z^{\prime}\right)} & \text { for } \Omega_{k 0}=0 \\ \dfrac{c}{(1+z) H_{0} \sqrt{-\Omega_{k 0}}} \sin \left(\sqrt{-\Omega_{k 0}} \displaystyle\int\limits_{0}^{z}\dfrac{d z^{\prime}}{E\left(z^{\prime}\right)}\right) & \text { for } \Omega_{k 0}<0\end{array}\right.}}}$$
+\end{large}
+\section{Distance Sum Rule}
+Under the assumption of homogeneity and isotropy of the universe, one can define the dimensionless comoving distance $(D_{co})$ as
+ \begin{IEEEeqnarray}{rCl}\label{eq:sl7b}
+$$D_{co}^{^{os}}\equiv D_{co}(0,z_s)\equiv\dfrac{H_0}{c}d_{co}^{^{os}};~~~~D_{co}^{^{ol}}\equiv D_{co}(0,z_l)\equiv\dfrac{H_0}{c}d_{co}^{^{ol}};~~~~D_{co}^{^{ls}}\equiv D_{co}(z_l,z_s)\equiv\dfrac{H_0}{c}d_{co}^{^{ls}}$$
+\end{IEEEeqnarray}
+where $d_{co}^{^{os}}$, $d_{co}^{^{ol}}$ and $d_{co}^{^{ls}}$ represent the comoving distances between observer-source, observer-lens and lens-source respectively.
+ According to the distance sum rule \cite{pj1993,sr2015}, these three dimensionless distances are related
+ \begin{IEEEeqnarray}{rCl}\label{eq:sl8}
+$$
+\dfrac{D_{{co}}^{^{{ls}}}}{D_{co}^{^{{os}}}}=\sqrt{1+\Omega_{k0} \left(D_{co}^{^{ol}}\right)^{2}}-\dfrac{D_{co}^{^{ol}}}{D_{co}^{^{os}}} \sqrt{1+\Omega_{k0} \left(D_{co}^{^{os}}\right)^{2}}
+$$
+\end{IEEEeqnarray}
+
+We can also write the distance sum rule in terms of the time-delay distance\footnote{We discussed time-delay distance in Section-3.5}
+ \begin{IEEEeqnarray}{rCl}\label{eq:sl9}
+$$
+\dfrac{D_{{co}}^{^{{ol}}}D_{{co}}^{^{{os}}}}{D_{co}^{^{{ls}}}}=\left[\dfrac{1}{D_{{co}}^{^{{ol}}}}\sqrt{1+\Omega_{k0} \left(D_{co}^{^{ol}}\right)^{2}}-\dfrac{1}{D_{co}^{^{os}}} \sqrt{1+\Omega_{k0} \left(D_{co}^{^{os}}\right)^{2}}\right]^{-1}
+$$
+\end{IEEEeqnarray}
+\newpage      
+      \chapter{Statistics}
+\section{Overview}
+Every day we are faced the situations with uncertain outcomes and have
+to make decisions based on incomplete data:``Should I eat mangos?'',``Which book should I buy?'',``Should I take this medication?'' etc. Statistics couldn't help in some of typical situations because they involve too many unknown variables but in many situations, statistics can extract maximum knowledge from the given information. In such type of cases statistics clearly figure out what we know and what we don't know. Therefore, without statistics the interpretation of data become difficult work. \\
+As we know cosmologists are interested to study the origin and evolution of the physical universe. Cosmology is intrinsically related to the statistics. For example any theory will predict average
+statistical properties of our universe and we can only observe a
+particular realization of that. Therefore, we will discuss here only
+those topics which have applications in cosmology. \\
+In this chapter we will study about branch of statistics, random
+number and random variables, Monte Carlo and Markov Chain Monte
+Carlo. 
+\section{Statistical Inference.}
+Statistical Inference is a process to learn about what we do not
+observe i.e. parameters using what we know (data).
+There are two main philosophical approaches to statistics. 
+\vspace{2mm}\\
+$\bullet$ \textbf{Frequentist Approach}
+The Frequentist inference is the process to connect the observed
+data and the statements about the parameters using the sampling
+distribution of a statistic. Any Frequentist inferential procedure
+depends on three basic ingredients:  the data, the model and an
+estimation procedure. The main assumption in Frequentist statistics is
+that there is a definite, though unknown, underlying distribution in
+the data that is related to all estimates. \\
+Frequentist approach is a null hypothesis significance testing
+(NHST). This approach never uses or gives the probability of a
+hypothesis. It depends only on the likelihood, means doesn't require
+a prior.  
+\vspace{2mm}\\
+$\bullet$ \textbf{Bayesian Approach}  In statistical inference, we are trying to find the values of the
+parameters of the underlying distribution. We clearly cannot say about
+the true value of parameter but only give a probabilistic
+answer. Therefore, to handle such condition we have to use a different
+approach other than Frequentist approach. The Reverend Thomas Bayes first discovered the theorem that now bears
+his name-Bayes' Theorem. \\
+Basically Bayes' Theorem is a conditional probability for two
+quantity. It is  a way of finding a probability when we know certain
+other probabilities. The conditional probability of event A occurring
+given the B has occurred is given by the ratio of intersection of A and
+B to the total B. 
+\begin{IEEEeqnarray}{rCl}\label{eq:papb}
+$$P(A$|$B)=\dfrac{P(A\cap B)}{P(B)}$$
+  \end{IEEEeqnarray}
+Using the multiplication rule we can write eq.(\ref{eq:papb}) as
+\begin{IEEEeqnarray}{rCl}\label{eq:papbb}
+$$P(A\cap B)=P(A|B) P(B)$$
+  \end{IEEEeqnarray}
+Since $P(A\cap B)$ is symmetric in A and B, which gives
+\begin{IEEEeqnarray}{rCl}\label{eq:papbbb}
+$$P(A$|$B) P(B) =P(A\cap B)=P(B|A) P(A)$$
+  \end{IEEEeqnarray}
+Now dividing by $P(A)$ the eq.(\ref{eq:papbbb}) can be written
+as
+\begin{IEEEeqnarray}{rCl}\label{eq:bayes}
+$$\boxed{P(B|A)=\dfrac{P(A|B) P(B)}{P(A)}}$$
+  \end{IEEEeqnarray}
+This is a {\textbf{Bayes' Theorem}} \cite{pj1993}. 
+\section{Maximum Likelihood Method}
+Suppose we have a random sample $X_1, X_2, X_3,....,X_n$, for which the probability density function of each $X_i$ is $f(x_i;\theta)$. Then, we can write the joint probability density function as given below \\
+\begin{center}
+$L(\theta)=P(X_1=x_1,X_2=x_2,\ldots,X_n=x_n)=f(x_1;\theta)\cdot f(x_2;\theta)\cdots f(x_n;\theta)=\prod\limits_{i=1}^n f(x_i;\theta)$\\
+\end{center}
+This joint probability density function is defined as $L(\theta)$, which is called \textbf{Likelihood}. \\
+It looks a realistic process that a best estimate of the unknown parameter $\theta$ would be the value of $\theta$ that maximizes the probability. \\
+Let $f(x_i, \mu)$ be given by a Gaussian distribution. with mean $\mu$ and standard deviation $\sigma$ . The probability density function of $X_i$ is
+\begin{center}
+$f(X_i;\mu)=\dfrac{1}{\sigma \sqrt{2\pi}}\text{exp}{\mathlarger{\mathlarger{\sum}}_{i=1}^n-\dfrac{1}{2}\left[\dfrac{x_i-\mu}{\sigma_i}\right]^2}$
+\end{center}
+The likelihood function can be written as \\
+\begin{IEEEeqnarray}{rCl}\label{eq:musi}
+$$L(\mu,\sigma)=\sigma^{-n}(2\pi)^{-n/2}\text{exp}{\mathlarger{\mathlarger{\sum}}_{i=1}^n -\dfrac{1}{2}\left[\dfrac{x_i-\mu}{\sigma_i}\right]^2}$$
+\end{IEEEeqnarray}
+Our aim is to estimate the unknown parameters using maximizing the likelihood function. One may maximize the log of likelihood  instead likelihood because both likelihood and log likelihood functions are monotonically increase or decreasing function. Also log likelihood functions makes maths easy with exponential quantities.  \\
+Therefore the log of the likelihood function
+\begin{IEEEeqnarray}{rCl}\label{eq:music}
+$$\text{log} L(\mu,\sigma)=-n\text{log}\sigma-\dfrac{n}{2}\text{log}(2\pi)-\dfrac{1}{2}{\mathlarger{\mathlarger{\sum}}_{i=1}^n\left[\dfrac{x_i-\mu}{\sigma_i}\right]^2}$$
+\end{IEEEeqnarray}
+Now we can define one more quantity related to maximum likelihood function
+\begin{IEEEeqnarray}{rCl}\label{eq:musics}
+$$\text{log} L(\mu,\sigma)=-n\text{log}\sigma-\dfrac{n}{2}\text{log}(2\pi)-\frac{\chi^2}{2}$$
+\end{IEEEeqnarray}
+Where,
+\begin{IEEEeqnarray}{rCl}\label{eq:chiii}
+$$\chi^2={\mathlarger{\mathlarger{\sum}}_{i=1}^n\left[\dfrac{x_i-\mu}{\sigma_i}\right]^2}$$
+\end{IEEEeqnarray}
+Now to estimate unknown parameter we have to set derivative of log likelihood equal to zero. Before this step, we can clearly see in eq.(\ref{eq:musics}) that first two quantities of right hand term are constant, so these term are giving their credit zero to estimate best fit of parameters. Therefore using eqs.(\ref{eq:musics},\ref{eq:chiii}):
+\begin{IEEEeqnarray}{rCl}\label{eq:chiiio}
+$$\chi^2={\mathlarger{\mathlarger{\sum}}_{i=1}^n\left[\dfrac{x_i-\mu}{\sigma_i}\right]^2}\approx-2\text{log}(L(\mu,\sigma))$$
+\end{IEEEeqnarray}
+We can conclude from eq.(\ref{eq:chiiio}) that either we maximize likelihood function or minimize the $\chi^2$ function, we will get the same values of best fit parameters. \\
+\section{Bayesian Statistics in Cosmology}
+Bayesian inference is a standard procedure in cosmology when the measurement results are compared to predictions of a parameter-dependent model. Markov Chain Monte Carlo  (MCMC) methods which are basically depends on the Bayesian statistics, are widely used for the estimation of cosmological parameters of a underlying cosmological model from a given  set of observational datasets. \\
+In this section we are going to discuss about Monte Carlo, Markov Chain and algorithm for Markov Chain Monte Carlo that is used to estimate the cosmological parameters. 
+\subsection{Monte Carlo}
+Monte Carlo method is a computational algorithm that depends on the repeated  random sampling to obtain the required numerical results. The key idea of this method is to solve the problem by the randomness. This is the most useful technique when it is difficult or impossible to solve by other approach. Monte Carlo method is mainly applied in the three classes of problem: Optimisation, numerical integration and probability distribution. In our work we use Monte Carlo for a probability distribution. \\
+In fact the Monte Carlo simulation is a random experimentations, hence the results of these experiments are not well known. Monte Carlo simulations are typically described by a large number of unknown parameters, most of them are difficult to obtain directly with experiments. 
+  \subsection{Markov Chain}
+  Lets a process with states $S=s_1, s_2, s_3, . . ., s_n$ of the system is described at certain intervals of time. At each time step, the system can be only in the one of these states. Suppose the system start from $s_i$ state and then moves to another state $s_j$ with \textbf{transition probability} $P_{ij}$. When a system remains in the same state, then the transition probability will be $P_{ii}$. \\
+  The key point is that this transition probability doesn't depend on the previous state of the system, means state $s_i$ depends only on $s_{i-1}$. Such kind of process or chain is known  as \textbf{Markov Chain}. So we can conclude that Markov Chain is a special case of a process which the future depends only upon the present, not upon the past. We will discuss Markov Chain in Markov Chain Monte Carlo technique in next section. \\
+   \subsection{Markov Chain Monte Carlo}
+The Bayesian approach requires the statistical inference that are based on the posterior. But as we know that dealing with the posterior algebraically or numerically is often problematic. As we discussed earlier that a Monte Carlo simulation is set an algorithms that use random number generators to approximate a specific quantity. And Markov Chain is a process where we can compute subsequent steps based only in the information given at the present. A crucial property of a Markov Chain is that it converges to a stationary state, means it converges to the posterior. Then only because of this behaviour we can calculate quantities of our interest i.e. mean, variance, etc.  \\
+The combination of both procedures is called a \textbf{Markov Chain Monte Carlo (MCMC)}. MCMC are now widely used for the cosmological parameter estimation using Bayesian approach.  This technique set a algorithm that generate posterior distributions by sampling the likelihood function in a parameter space. \\
+Suppose we have collected some data $D$ from an experiment. Of course these data came from some hypothesis or model which have parameters say $\theta$. Clearly, we are interested in the probability of getting the model parameters given the data. This inferred from Bayes' Formula
+\begin{IEEEeqnarray}{rCl}\label{eq:bayessss}
+$\boxed{P(\theta|D) =\dfrac{P(D|\theta) P(\theta)}{P(D)}}$
+  \end{IEEEeqnarray}
+Here we talk about the parameter value $\theta$ for a particular model, means  the model that gives evolving to the parameter. But in some application Bayes' theorem is defined with model explicitly. Let's call the model $M$. Then we can rewrite eq.(\ref{eq:bayessss}) as
+\begin{IEEEeqnarray}{rCl}\label{eq:bayesmod}
+$\boxed{P(\theta|D,M) =\dfrac{P(D|\theta,M) P(\theta|M)}{P(D|M)}}$
+  \end{IEEEeqnarray}			
+Now we define all these probability distribution explicitly. \\
+$\bullet$ \textbf{Likelihood$[P(D|\theta,M)]$:} The first and most prominent component of the Bayesian model is the Likelihood. It is a mathematical formula that specifies the likely of the data.  We can build our own likelihood formula from basic assumption of our observational data. In our work, \textit{we are using\textbf{ Gaussian distribution} of likelihood.}  \\
+$\bullet$ \textbf{Prior$[P(\theta|M)]$:} Prior expresses what we know about parameter before the experiments being done. This prior may be the result of previous experiments or theory i.e. age of universe to be positive or cosmological matter or dark energy density may have to be less than 1. In the absence of any previous information, the prior is often assumed to be a \textbf{constant (a flat prior).} \\
+$\bullet$ \textbf{Posterior$[P(\theta|D,M)]$:} Once we have chosen prior and likelihood which parameter are to be estimated for each parameter. Then multiplication of both quantities gives the posterior distribution.  Posterior is a probability distribution for the given parameter after you have sampled data. 
+%It is a conditional distribution because it conditions on the observed data.  \\
+Therefore, we can write a relation between Likelihood, prior and posterior as\\
+\begin{IEEEeqnarray}{rCl}\label{eq:postrt}
+\mathrm{Posterior}=\dfrac{ \mathrm{Likelihood} \times \mathrm{Prior}}{\mathrm{Evidence}}
+  \end{IEEEeqnarray}	
+Where the evidence is
+\begin{IEEEeqnarray}{rCl}\label{eq:postrrt}
+$$P(D|M)=\int d\theta P(D|\theta,M) P(\theta|M)$$
+  \end{IEEEeqnarray}	
+So far, to estimate the distribution of posterior we have to collect likelihood, prior and evidence. Both likelihood and prior are easy to handle but to fix the multidimensional integral or evidence we will discuss algorithm in next section.
+\subsection{Affine-invariant Ensemble  Algorithm-  EMCEE}
+The Affine-invariant ensemble\cite{df2013} is one of the simplest Markov Chain Monte Carlo sampling method. This method has been applied to a huge variety of problems to estimate parameters. Basically, our aim is to generate the multidimensional points which are distributed according to some target probability distribution function. This algorithm works in a way that if more and more samples are generated the distribution of the values then it becomes more and more closer to the actual required distribution. The samples are generated with the distribution of the given sample is depend only on the previous sample value, which clearly shows that Markov Chain  has no memory. The idea is to find a function which is proportional but not equal to target probability distribution function. This means that the normalization factor (Evidence) need not to estimate explicitly since that prove to be very difficult and the performance of this algorithm is invariant under transformations of the parameter space. These property makes Affine-invariant ensemble Algorithm a powerful tool. \\
+This algorithm then goes as follows: 
+ \begin{enumerate}
+ 	\item
+\textbf{Initial Seeds:} Imagine the sampling process is a random walk in the parameter space of the target distribution. This random walk has to be initialised at a point say $x_0$ and for many walkers, the positions of walkers are initialised simultaneously by $x_n$. We choose a initial seed in parameter space. Lets say we have two unknown parameters for a given model. Then separately we have to set two starting point for each. A common approach to initialises the point is that it should start at a random position close to the region where the likelihood is expected to be centred. 
+\item	
+\textbf{Steps and Walkers:} After defining initial seeds, we have to define the total number of steps for each parameter. Each parameter is moves in the parameters space along with steps to reach their best fit values. On the other hand, EMCEE is not based on single iteration random walk but it uses a walkers ensemble which can moves in parallel. So, along with steps, we have to set total number of even walkers in the system. Therefore, for a defined steps and walkers, total number of samples will be equal to the multiplications of steps by walkers.
+\item	
+\textbf{Prior Range:} As we discussed earlier that in the Bayesian statistics we have to set prior for each parameter. There are many type of prior we can apply here i.e. Uniform prior, Gaussian prior etc. But a general question is that what type of prior should we use? For this question, we can't make a strong statement, means the choice to choose the prior depends on the problem with which we are working. For example we are trying to estimate value of Hubble constant using observational datasets. For this, we have a prior information that Hubble Constant is a always positive quantity and less than 100. So we may set a uniform prior range from 0 to 100. Similarly for other parameters we may a Gaussian prior with mean and variance. 
+\item
+\textbf{Likelihood Function:} We have to define the Likelihood function for a given target distribution function. The choice of likelihood type depends open the observational datasets that we have collected before the experiments. In cosmology, most of the observational dataset we assumed that these are collected under Gaussian distribution.
+\item
+\textbf{The EMCEE Algorithm:} After deciding the initial seed and next propose point, we have to set a algorithm that will accept or reject some point which are proposed by the proposal function. Here we discuss the main steps of  Metropolis-Hastings algorithm.
+     \begin{enumerate}
+\item
+First choose a walkers from $x_n$, say it $x_i$ then pick another random walker from the remaining $x_n$, say it $x^{trial}$. To update the position of $x_i$ walker, propose a trail step. The proposed new position of $x_i$ will lies on the line joining $x_i$ and $x^{trail}$ and the distance between them is stretched by $z$ as shown below
+\begin{IEEEeqnarray}{rCl}\label{eq:alppa}
+$$x_i^u=x^{trail}+z(x_i-x^{trail})$$
+\end{IEEEeqnarray}	
+where $z$ is a random variable that drawn from a fixed symmetric distribution function.
+\item
+We define the acceptance ratio $\alpha$ which is the ratio of posterior at next proposed point to posterior at previous point. 
+\begin{IEEEeqnarray}{rCl}\label{eq:alpa}
+$$\alpha=z^{d-1}\dfrac{Posterior(x_i^u)}{Posterior(x^{i})}=z^{d-1}\dfrac{P(x_i^u)}{P(x_i)}$$
+  \end{IEEEeqnarray}	
+where $d$ is number of parameters or dimensions of parameters space. In eq.(\ref{eq:alpa}) we clearly can see that there is no need to define normalisation factor of posterior. Therefore, ratio of posterior ratio makes the easy to handle situation.
+\item
+Now from the posterior ratio $\alpha$ we can set if $\alpha\geq 1$, then this algorithm will accept the next proposed point. In this condition the next proposed point has higher posterior probability than the previous point. Therefore, this proposed point is accepted. 
+\item
+If the posterior ratio is less than one i.e. $\alpha<1$. Here, in this condition we are not directly rejecting the next proposed point. Because our aim is trace the whole target distribution which may have many local maximum with one global maximum. So to report global maximum we have to cross local maximums. Therefore, we have to accept next proposed point with some probability even with $\alpha\leq$. It can happen only and only if we compare this $\alpha$ with a uniform random number between 0 to 1 $(U[0,1])$. The standard uniform function has the property that $P(U\leq \alpha)=\alpha$ otherwise zero. So the comparison  of the uniform variate to $\alpha$ ensure that we accept the proposal with probability $\alpha$.
+\begin{enumerate}
+\item 
+if $\alpha\geq U[0,1]$, even then accept the proposed point with probability $\alpha$ ;
+\item
+if $\alpha<U[0,1]$, then reject the proposed point and return to previous point.
+\end{enumerate}
+\item
+Now repeat from the step (a) until we have large enough posterior samples in the parameter space.
+\end{enumerate}
+\item
+\textbf{Burn-in Phase Period:} Burn-in refers to the method of discarding an initial portion of a Markov chain sample so that the effect of initial values on the posterior inference can be  minimized.  So It is advisable to throw some initial steps from our sampling, which are not relevant and not close to the converging phase. Otherwise this may over-sample regions with very low probabilities. Therefore,the efficiency of MCMC can be improved by removing the burn-in phase. \\
+\end{enumerate}
+\chapter{Gravitational Lensing}
+\section{Introduction}
+When the light rays from source is passes near a mass distribution, they get bent due to the presence of gravity. Light from a source gets deflected towards observer and we see multiple images of a source. The effect of multiple images because of deflection of light rays is called strong gravitational lensing \cite{rn1996,sl1992}. As the consequence of lensing, light rays that are bent from their paths towards the observer would otherwise have not reached to the observer. Light can also be bent away from an observer but that is not our case of interest. There are different system of gravitational lensing:Strong Lensing, Weak Lensing and Micro Lensing. The distinction between these system depends on the positions of the lens, sources and observers, mass and shape of lens.
+\section{Lensing by Point Mass}
+The propagation of light in arbitrary curved space-time is a complicated theoretical problem. For all cases of gravitational lensing we can assume the geometry of Universe is well described by Friedmann-Lema\^itre-Robertson-Walker (FLRW) metric and inhomogeneous of matter, which causes the lensing, act as perturbation. Here in this section, we assume that the galaxy present in between source and observer acts as point mass, which is one of the strong conditions for Einstein rings.
+\subsection{Lens Equation}
+The geometry of a typical gravitational lens system is shown in figure below \\
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=150mm]{sgl1p}
+\caption{Illustration of a gravitational lens system.\\
+\label{point}}
+\end{figure} \\
+In the Fig.\ref{point}, where S is  position of the source, O is position of observer, I is position of the images. A light ray is deflected by an angle $\hat{\alpha}$ at the lens. The line passing through the center of lens is the optic axis. The angle between the optic axis and the true position of source is $\beta$(position without lens). The angle between the optic axis and the image(I) is $\theta$, and also $\alpha$ is the reduced deflection angle. The angular diameter distances between observer and lens, lens and source and observer and source are denoted by $d_A^{^{OL}}$, $d_A^{^{LS}}$, $d_A^{^{OS}}$ respectively. \\
+Note that $d_A^{^{OS}}\neq d_A^{^{LS}}+d_A^{^{OL}}$ because these are angular diameter distances instead of simple distances. \\
+Assuming all angles are very small. This implies that
+\begin{center}
+     $sin\theta\approx\theta$
+\end{center}
+This assumption is applicable for all symbol i.e. $\alpha,\hat\alpha,\beta,\theta$ as shown in Fig.\ref{point}.\\
+
+\begin{center}
+     $\beta d_A^{^{OS}}+\alpha(\theta)d_A^{^{OS}}=\theta d_A^{^{OS}}$ \\
+      \vspace{2mm}
+     $\boxed{\beta=\theta-\alpha(\theta)}$
+\end{center}
+This equation called \textbf{lens} or \textbf{ray tracing equation}. This
+equation is nonlinear in nature , so it is possible to have multiple images $\theta$ corresponding to a single source position $\beta$.
+\subsection{Deflection Angle}
+When the light passes through medium, then there is delay in the
+arrival time of light  through the medium with respect to another
+light which travel through the vacuum. The same effect is also observed in gravitational lensing. Their is
+also observed reduction in effective  speed of light($v$) in a
+gravitational field relative to propagation in vacuum, which is
+proportional to time delay.  This  time delay  $\Delta t_s$, which is known as $Shapiro$ $Delay$, is caused directly by the motion of the light through the gravitational potential of the lens.
+\vspace{2mm}\\
+The index of refraction is defined as 
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl4}
+$$n=\dfrac{c}{v}\approx 1-\dfrac{2 \Phi}{c^{2}}$$
+\end{IEEEeqnarray}
+The Shapiro delay $\Delta t_s$ is calculated as given below
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl5}
+$$
+\Delta t_s=\displaystyle\int \dfrac{\mathrm{d} l}{v}-\int \dfrac{\mathrm{d} l}{c}=\int(n-1) \mathrm{d} l=-\dfrac{2}{c^{3}} \int \Phi \mathrm{d} l
+$$
+\end{IEEEeqnarray}
+Where, $dl$ is the light path.
+\vspace{2mm}\\
+When the light passes through a gravitational field of refractive index $(1-\frac{2 \Phi}{c^{2}})$, the light is deflected by an angle say $\hat\alpha$. This deflection angle is calculated by integration along the light path of gradient of $n$ perpendicular to the light path. 
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl6}
+$$\hat\alpha =-\displaystyle\int\nabla_\perp ndl$$
+\end{IEEEeqnarray}
+Here we are taking only that deflection of light which is perpendicular to the light path we are ignoring the deflection due to other galaxies in between source to lens and lens to observer. Therefore, deflection angle is given as
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl8}
+ $$\boxed{\hat\alpha =\dfrac{4GM}{c^2\xi}}$$
+\end{IEEEeqnarray}
+\vspace{2mm}\\
+And deflection angle can be written in terms of Schwarzschild radius
+\begin{center}
+$\hat\alpha =\dfrac{2R_S}{\xi}$
+\end{center}
+For example, the deflection angle of Sun is given by
+\begin{center}
+$\hat\alpha =\dfrac{4GM_\odot}{c^2R_\odot}=1.75\textprime\textprime$
+\end{center}
+Where, $M_\odot$ is mass of Sun =2$\times10^{33}$ grams, $R_\odot$ is radius of Sun =6.957$\times10^8$ meters, G is gravitational constant =6.67408$\times10^{-11}$ m$^3$ kg$^{-1}$ s$^{-2}$. 
+So the light deflected by the Sun with an angle $1.75\textprime\textprime$ using point mass assumption, which was predicted by Prof. Eddington and his group in 1919. This was the first observational test of General Theory of Relativity.
+\subsection{Einstein Radius}
+when a point source is present exactly behind a point lens then ring like image is known as $Einstein$ $Ring$. \\
+We calculate that the deflection angle is given by
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl9}
+	 $$\hat\alpha(\xi) =\dfrac{4GM(\xi)}{c^2\xi}$$
+\end{IEEEeqnarray}
+According to lens equation
+\begin{center}
+$\beta=\theta-\alpha(\theta)$
+\end{center} 
+By putting the value of $\alpha(\theta)$ in lens equation, we get
+\begin{center}
+$\beta=\theta-\dfrac{d_A^{^{LS}}}{d_A^{^{OS}}} \dfrac{4GM(\theta)}{c^2d_A^{^{OL}}\theta}$
+\end{center}
+Due to perfect alignment of lens, observer and source, we put $\beta\longrightarrow 0$, we obtain the radius of the ring to be
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl11}
+ $$\boxed{\theta_E=\left[\dfrac{4GM(\theta_E)}{c^2} \dfrac{d_A^{^{LS}}}{d_A^{^{OL}}d_A^{^{OS}}}\right]^{1/2}}$$
+\end{IEEEeqnarray}
+This is referred as Einstein radius.
+\vspace{2mm}\\
+In the case of multiple imaging, the typical angular separation of images is of order 2$\theta_E$. Sources which are closer than $\theta_E$ are significantly magnified due to  stronger gravitational lensing, whereas sources which lie outside $\theta_E$, are less magnified. Thus, in many lens models the Einstein ring represents roughly the boundary between two position of sources in which one region is multiply-imaged and other one is single imaged. \\
+\section{Lensing by Singular Isothermal Sphere}
+We have studied a straightforward and very simple case of lens as a  point mass lens. When we consider galaxy lenses we need to redefine our lens model which is dependent on its matter distribution. \\
+A simple model of  the galaxies assumes that the stars and other mass components behave like particles of an ideal gas, confined by their spherical symmetric gravitational potential. This mass distribution, called a Singular Isothermal Sphere (SIS). \\
+Using the velcoity dispersion and hydrostatic equallibirum equations, one can estimate the density as
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl16}
+	$${\boldmath{\rho(r)=\dfrac{\sigma_v^2}{2\pi G} \dfrac{1}{r^2}}}$$
+\end{IEEEeqnarray}
+This mass distribution  is called the  Singular Isothermal Sphere (SIS). \\
+%Now in case of equilibrium:
+%\begin{center}
+%	$\dfrac{mv_{rot}^2}{r}=\dfrac{GMm}{r^2} $ \\
+%	\vspace{2mm}
+%	$v_{rot}^2=\dfrac{GM(r)}{r}$
+%\end{center}
+The mass distribution in eq.(\ref{eq:sgl16}) is three dimensional
+density. So By projecting the three dimensional density along the line
+of sight, we get surface density \\
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl17}
+$${\boldmath{\boxed{\Sigma(\xi)=\dfrac{\sigma_v^2}{2G\xi}}}}$$
+\end{IEEEeqnarray}
+The  deflection angle is given by
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl18}
+	$$\hat\alpha=\dfrac{4GM(\xi)}{c^2\xi}$$
+\end{IEEEeqnarray}
+Where,
+\begin{center}
+	 $M(\xi)=2\pi \displaystyle\int\limits_{0}^{\xi} \Sigma(\xi\textprime )\xi\textprime d\xi\textprime$
+	 \end{center}
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl19}
+	$${\boldmath{M(\xi)=\dfrac{\pi \sigma_v^2}{G}\xi}}$$
+\end{IEEEeqnarray}
+From eqs.(\ref{eq:sgl18}, \ref{eq:sgl19})
+\begin{center}
+	$\hat\alpha=\dfrac{4G}{c^2\xi}\times\dfrac{\pi\sigma_v^2}{G}\xi$ \\
+	\vspace{4mm}
+	${\hat\alpha=\dfrac{4\pi\sigma_v^2}{c^2}}$
+\end{center}
+The above formula indicates that the deflection angle is independent of the  impact parameter $(\xi)$.
+\subsection{Einstein Radius}
+The Einstein radius of the singular isothermal sphere is given by, using eq.(\ref{eq:sgl11})
+\begin{center}
+	$\theta_E^2=\dfrac{4GM(\theta_E)}{c^2}\dfrac{d_A^{{LS}}}{d_A^{{OS}}d_A^{{OL}}}$
+\end{center}
+Using the eq.(\ref{eq:sgl19}), we get
+\begin{center}
+	$\theta_E^2=\dfrac{4G}{c^2}\dfrac{d_A^{{LS}}}{d_A^{{OS}}d_A^{{OL}}}\times \dfrac{\pi\sigma_v^2}{G}\xi$
+\end{center}
+Again put, $\xi=d_A^{{OL}}\theta$
+\begin{center}
+	$\theta_E^2=\dfrac{4G}{c^2}\dfrac{d_A^{{LS}}}{d_A^{{OS}}d_A^{{OL}}}\times \dfrac{\pi\sigma_v^2}{G}d_A^{{OL}}\theta_E$
+\end{center}
+\hspace{47mm} $={4\pi\dfrac{\sigma_v^2}{c^2}}\dfrac{d_A^{{LS}}}{d_A^{{OS}}}$ \\
+\vspace{3mm}
+\hspace{45mm} $=\hat\alpha\dfrac{d_A^{{LS}}}{d_A^{{OS}}}$
+\begin{center}
+$\boxed{\theta_E=\alpha}$
+\end{center}
+Due to circular symmetry, the lens equation is  one-dimensional.
+Multiple images are possible when the source lies  inside the  Einstein ring i.e. $\beta<\theta_E$. Under this condition, the lens equation has the two solution
+\begin{center}
+	$\theta_\pm=\beta\pm\theta_E$
+\end{center}
+The equation of lens is straight line in nature, so the image which lie on $\theta_\pm$, the source and the lens all lie on straight line.
+
+\section{Distance Ratio in Different Lens Profile}
+Here in this section, we will calculate the ratio of angular diameter distances lens to source and observer to source i.e. ${d_A^{^{LS}}}/{d_A^{^{OS}}}$.  We will discuss this ratio in three different type of lens profile.
+\subsection{Extended Power-law Spherical Lens Profile}
+n the previous section we shown that $\rho$ is varies as $1/r^2$ in eq.(\ref{eq:sgl16}). Here we choose a general mass model for the lens galaxies. 
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl20}
+$$\left\{\begin{array}{l}{\rho(r)=\rho_{0}\left(r / r_{0}\right)^{-\gamma}} ~~~~~~~\text{Total (luminous +dark-matter) mass density}\\ {\nu (r)=\nu_{0}\left(r / r_{0}\right)^{-\delta}}~~~~~~~~\text{Luminosity density of stars} \\ {\beta(r)=1-\sigma_{\theta}^{2} / \sigma_{r}^{2}}~~~~~~~~~~\text{Anisotropy of the stellar velocity dispersion}\end{array}\right.$$
+\end{IEEEeqnarray}
+where, $\sigma_\theta$ is the tangential velocity dispersion and $\sigma_r$ is the radial velocity dispersion.
+\vspace{2mm}\\
+Using the \textbf{Spherically Symmetric Jeans Equations}, one can define the ratio of angular diameter distance 
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl34}
+$$
+{\boldmath{\boxed{\dfrac{d_A^{^{LS}}}{d_A^{^{OS}}}=\dfrac{c^2\theta_E}{4{\pi}\sigma_0^2}\left(\dfrac{\theta_{\mathrm{ap}}}{\theta_{E}}\right)^{2-\gamma} \times f\left(\gamma, \delta, \beta\right)}}}$$
+\end{IEEEeqnarray}
+Where, $\theta_{a p}$ is the angular radii of circular aperture, and 
+$$
+{\boldmath{\boxed{f(\gamma, \delta, \beta)=\dfrac{\left(2\sqrt{\pi}\right)(3-\delta)}{(\xi-2 \beta)(3-\xi)}\times\left[\frac{\Gamma[(\xi-1) / 2]}{\Gamma(\xi / 2)}-\beta \frac{\Gamma[(\xi+1) / 2]}{\Gamma[(\xi+2) / 2]}\right] \frac{\Gamma(\gamma / 2) \Gamma(\delta / 2)}{\Gamma[(\gamma-1) / 2] \Gamma[(\delta-1) / 2]}}}}
+$$
+\subsection{Power-law Spherical Lens Profile}
+Now in this case, we will consider only $\rho \sim r^{-\gamma}$ where r is the spherical radius from the center of the lensing galaxy. Combined with the spherical Jeans equation, one can express observational value of the angular-diameter distance ratio as given below
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl35}
+$$
+{\boldmath{\boxed{\dfrac{d_A^{^{LS}}}{d_A^{^{OS}}}=\dfrac{c^{2} \theta_{E}}{4 \pi \sigma_{a p}^{2}}\left(\dfrac{\theta_{a p}}{\theta_{E}}\right)^{2-\gamma} f^{-1}(\gamma)}}}
+$$
+\end{IEEEeqnarray}
+Where, 
+$$
+{\boldmath{\boxed{f(\gamma)=-\frac{1}{\sqrt{\pi}} \frac{(5-2 \gamma)(1-\gamma)}{3-\gamma} \frac{\Gamma(\gamma-1)}{\Gamma(\gamma-3 / 2)}\left[\frac{\Gamma(\gamma / 2-1 / 2)}{\Gamma(\gamma / 2)}\right]^{2}}}}
+$$
+\subsection{Singular Isothermal Sphere Lens Profile}
+In the case signular isothermal sphere taking $\gamma=\delta=2$ and $\beta=0$. Then eqs.(\ref{eq:sgl34}, \ref{eq:sgl35}) becomes as given below
+\begin{IEEEeqnarray}{rCl}\label{eq:sgl36}
+$$\dfrac{d_A^{^{{LS}}}}{d_A^{^{{OS}}}}=\dfrac{c^{2} \theta_{E}}{4 \pi \sigma_{S I S}^{2}}$$
+\end{IEEEeqnarray}
+And the velocity dispersion $\sigma_{SIS}$ reflects the total mass of the lens (including dark matter). In order to quantify its relation to the observed velocity dispersion of stars $\sigma_0$, we introduce a free parameter as given below
+$$\sigma_{SIS}=f_e\sigma_0$$
+Thus eq.(\ref{eq:sgl36}) can be rewritten as given below
+$${\boldmath{\boxed{\dfrac{d_A^{^{{LS}}}}{d_A^{^{{OS}}}}=\dfrac{c^{2} \theta_{E}}{4 \pi f_e^2\sigma_{0}^{2}}}}}$$
+\vspace{5mm}
+So far we defined the distance ratio observationally for each lens model. Now using eq.(\ref{eq:sl8}) we can define a theoretical distance ratio as
+\begin{IEEEeqnarray}{rCl}\label{eq:sglla}
+$$
+d_{\mathrm{R}}^{\mathrm{th}} \equiv \dfrac{d_{\mathrm{A}}^{1 \mathrm{s}}}{d_{\mathrm{A}}^{\mathrm{OS}}}=\sqrt{1+\Omega_{k 0}\left(\dfrac{H_{0} d_{\mathrm{L}}^{\mathrm{OL}}}{c\left(1+z_{l}\right)}\right)^{2}}-\dfrac{d_{\mathrm{L}}^{\mathrm{OL}}\left(1+z_{s}\right)}{d_{\mathrm{L}}^{\mathrm{OS}}\left(1+z_{l}\right)} \sqrt{1+\Omega_{k 0}\left(\dfrac{H_{0} d_{\mathrm{L}}^{\mathrm{OS}}}{c\left(1+z_{s}\right)}\right)^{2}}
+$$.
+\end{IEEEeqnarray}
+
+\section{Time-Delay in Strong Gravitational Lensing}
+ Strong gravitational lens systems can be used to measure the cosmological parameters. This effect offers an independent method to put an effort to solve the  tension in the Hubble parameter values. \\
+When a background object (source) emit a light rays, will take different paths through spacetime at the different image positions. Because these paths have different path length and also passes through a different gravitational potentials. So, light rays which were emitted at the same times, will reach to earth or observer at different times. Therefore, there is delay in time between multiple images. If the source is variable, this time-delay can be measured by monitoring the lens which gives us the information about the flux variations corresponding to the same source event. This time-delay is related to a quantity which is referred as \textbf{``time-delay distance"} is used to estimate the cosmological  parameters.  \\
+So before moving into the calculation for cosmological parameter, first we summarize the theoretical background of time-delay cosmography in next section. 
+As shown in Fig.\ref{fig:tdel}, the time delay of an image corresponding  source position $\boldsymbol{\beta}=\left(\beta_{1}, \beta_{2}\right)$ at an angular position $\boldsymbol{\theta}=\left(\theta_{1}, \theta_{2}\right)$ relative to no lensing effect, is given by \cite{rn1996}
+ \begin{figure}[ht!]
+\centering
+\includegraphics[width=140mm]{tdel}
+\caption{Propapgation of unperturbed and perturbed light rays from the source \textbf{S} to earth \textbf{E} via lens object \textbf{L}.\\
+\label{fig:tdel}}
+\end{figure} \\
+ \begin{IEEEeqnarray}{rCl}\label{eq:td1}
+ {\boldmath{\boxed{
+$$\delta t(\boldsymbol{\theta}, \boldsymbol{\beta})=\dfrac{\left(1+z_l\right)}{c}\dfrac{d_A^{OS}d_A^{OL}}{d_A^{LS}}\left[\dfrac{(\boldsymbol{\theta}-\boldsymbol{\beta})^{2}}{2}-\psi(\boldsymbol{\theta})\right]$$ }}}
+ \end{IEEEeqnarray}
+ \vspace{3mm}\\
+We will get total time-delay for a \textbf{SIS} model as given below
+\begin{IEEEeqnarray}{rCl}\label{eq:td19a}
+$$
+\Delta t_{ij}=   \dfrac{\left(1+z_l\right)}{2c}\dfrac{d_A^{^{OS}}d_A^{^{OL}}}{d_A^{^{LS}}}\left[\theta_j^2-\theta_i^2\right]$$
+\end{IEEEeqnarray}
+This is the time delay which depends only on the angular positions of images rather than lens position.\\
+eq.(\ref{eq:td19a}) can be rewritten as 
+\begin{IEEEeqnarray}{rCl}\label{eq:td1999}
+ {\boldmath{\boxed{
+ $$
+ d_{\Delta t}^{\mathrm{obs}}=\left(1+z_{l}\right) \dfrac{d_{\mathrm{A}}^{\mathrm{OS}} d_{\mathrm{A}}^{\mathrm{OL}}}{d_{\mathrm{A}}^{\mathrm{LS}}}=\dfrac{2c\Delta t_{i j}}{\left[\theta_{j}^{2}-\theta_{i}^{2}\right]}
+ $$
+ }}}
+\end{IEEEeqnarray}
+And theoretical time delay distance is given as
+\begin{IEEEeqnarray}{rCl}\label{eq:td11119}
+$$
+d_{\Delta t}^{\mathrm{th}}=\left[\dfrac{\left(1+z_{l}\right)}{\eta_{l} d_{\mathrm{L}}^{\mathrm{OL}}} \sqrt{1+\Omega_{k 0}\left(\dfrac{\eta_{l} H_{0} d_{\mathrm{L}}^{\mathrm{OL}}}{c\left(1+z_{l}\right)}\right)^{2}}-\dfrac{\left(1+z_{s}\right)}{\eta_{s} d_{\mathrm{L}}^{\mathrm{OS}}} \sqrt{1+\Omega_{k 0}\left(\dfrac{\eta_{s} H_{0} d_{\mathrm{L}}^{\mathrm{OS}}}{c\left(1+z_{s}\right)}\right)^{2}}\right]^{-1}
+$$
+\end{IEEEeqnarray}
+
+
+
+
+\chapter{Observational Dataset}
+\section{Distance Ratio Data}
+For the distance ratio, we use  a sample of  SGL systems \cite{yc2019}, which is a collection of  $5$ systems from the LSD survey \cite{lv20022, lv2003, tt2002, tt2004}, $26$ from SL2S \cite{aj2011, as2013, as2015}, $57$ from the SLACS \cite{as20088, mw2009, mw2010}, $38$ from an extension of the SLACS for the Masses survey\cite{ys2015, ys2017}, $21$ from the BELLS \cite{jr2011} and $14$ from the BELLS-GALLERY \cite{ys2016, ys20166}. After combining all the datapoints of these surveys, we get $161$ galaxy-scale strong lensing systems \cite{yc2019}. This sample includes  information of the lens redshift $(z_l)$, source redshift $(z_s)$,  Einstein radius $(\theta_{\mathrm{E}})$, velocity dispersion $(\sigma_{\mathrm{ap}})$ measured inside the circular aperture with angular radii $\theta_{ap}$, and the half-light angular radius of lens galaxy $\theta_{\mathrm{eff}}$. The redshift range of lens is $0.0624 \leq z_{l} \leq 1.004$ and the source redshift range is $0.197 \leq z_{s} \leq 3.595$.
+\section{Time Delay Distance Dataset}
+For the time-delay distance, we use two different datasets: Double-Imaged lensed dataset and H0LiCOW dataset.\\
+For the double-imaged lensed dataset, we use $12$ double image SGL systems compiled by Balmes \& Corasaniti \cite{ib2013}. Observables in this data are the source redshift $(z_s)$, the lens redshift $(z_l)$, the angular positions of the two images of source $\theta_i$, $\theta_j$, and the time-delay $(\Delta t)$.  The lens redshift range of this data is $0.260\leq z_l\leq 0.890$ and source redshift range is $0.944\leq z_s\leq 2.719$. In earlier work, the same data has been used to estimate the cosmological parameters of different dark energy models \cite{ ij2015, cc2015}. In the other time-delay distance we use the recent H0LiCOW dataset of 6 datapoints.  The individual lens and their time-delay distance $(d_{\Delta t})$ are listed in Table \ref{tb:a1}. This data have been used for cosmological inferences in past \cite{kc2019,jj2020}. The main source of the uncertainties in the time estimation of the time-delay distances are time-delay measurement, LOS effect and the lens model. Out of these three uncertainties, the contribution from the estimation of the time delay and determination of the LOS are based on a Gaussian approximation and rest of the uncertainty comes from the lens model assumption as well as other unknown sources. In order to minimize the error, the H0LiCOW collaboration considered only those data points that have small uncertainties in the three above mentioned sources of error. Finally they determined the approximate error in $d_{\Delta t}$ for each lens. For more details on the uncertainties that contribute to the errors, please see \cite{kc2019}. 
+
+%H0LiCOW collaboration claims that there is no single wellspring of error that overwhelms the uncertainty from time-delay cosmography. Or maybe, it depends on characteristics of each specific lens that can be viably arbitrary such as image configuration, mass of the lens galaxy, the lens model, line of sight structure and other factors. Therefore, this collaboration pick out a small number of fined sample from a large enough sample that have small  uncertainties from each of the contributing sources of error. Finally they  determine the approximate $D_{\Delta t}$ error amount for each of the lenses. To see the contribution of uncertainties that has been used in estimation of time-delay distance please see Table 3 of reference \cite{kc2019}.
+
+
+
+\begin{table}[H]
+\centering
+\begin{large}
+     \begin{tabular}[b]{| c | c |c| c|}\hline
+       Lens Name & $z_l$ & $z_s$ & $d_{\Delta t}(\mathrm{Mpc})$\\ \hline \hline
+    B1608+656 & 0.6304 & 1.394        &$5156_{-236}^{+296}$  \\ \hline
+    RXJ1131-1231 & 0.295 & 0.654   & $2096_{-83}^{+98}$ \\ \hline
+    HE 0435-1223 & 0.4546 & 1.693   & $2707_{-168}^{+183}$ \\ \hline
+    SDSS 1206+4332 & 0.745 & 1.789  & $5769_{-471}^{+589}$  \\ \hline
+    WFI2033−4723 & 0.6575 & 1.662    &  $4784_{-248}^{+399}$\\ \hline
+    PG 1115+080 & 0.311 & 1.722            & $1470_{-127}^{+137}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{ H0LiCOW sample. }
+\label{tb:a1}
+\end{table}
+
+
+
+
+
+The SIS mass profile explains the galaxy mass distribution quite well \cite{dp2009} and double image systems are consistent with it. This is the reason why we use  double-image systems along with H0LiCOW sample in our analysis.
+
+%It is important to note that in order to put constraints on the cosmic curvature parameter in a model independent way, we have to calculate the comoving distances apart from distance ratio and time-delay distances in SGL systems. In this analysis, we replace the comoving distance with the luminosity distance using the well-known relation
+%$$d_{\mathrm{A}}=\dfrac{d_{\mathrm{co}}}{1+z}=\dfrac{d_{\mathrm{L}}}{(1+z)^2}$$
+\section{Type Ia Supernovae}
+We use the latest sample of type Ia supernova to estimate the luminosity distance. This dataset (Pantheon) is the largest SN Ia sample consisting of the Joint Light-curve Analysis (JLA) and Pan-STARRS1 confirmed the 1048 SNIa spectroscopically in the redshift range  $0.01<z<2.26$ \cite{dm2018}. To determine the observed distance modulus, Scolnic et al.  \cite{dm2018} performed the SALT2 \cite{jg2010} light curve fitter
+$$
+\mu_{\mathrm{SN}}=m_{\mathrm{B}}(z)+\alpha \cdot X_{1}-\beta \cdot {\mathcal{C}}-M_{\mathrm{B}}
+$$
+where $m_{\mathrm{B}}$ is the rest frame B-band peak magnitude, $M_{\mathrm{B}}$ represents absolute B-band magnitude of a fiducial SN Ia with $X_1 =0$ and ${\mathcal{C}}=0$. $X_1$ and ${\mathcal{C}}$ represent the time stretch of light curve and  supernova color at maximum brightness respectively. Thus, the stretch-luminosity parameter $(\alpha)$ and the color-luminosity parameter $(\beta)$ are calibrated to zero for the Pantheon sample, hence the observed distance modulus reduces to $\mu_{\mathrm{SN}}=m_{\mathrm{B}}-M_{\mathrm{B}}$. \\
+
+For a standard cosmological system, distance modulus can be defined as
+$$
+\mu_{\mathrm{th}}=5 \log_{10} \left(d_{\mathrm{L}} / {\mathrm{Mpc}}\right)+25
+$$
+Thus, we estimate the luminosity distance $(d_{\mathrm{L}})$ and uncertainty in the luminosity distance $(\sigma_{d_{\mathrm{L}}})$ for each SN Ia as
+ \begin{IEEEeqnarray}{rCl}\label{eq:sl10}
+$$
+d_{\mathrm{L}}(z)=10^{\left(\mu_{\text{SN}}-25\right) / 5}~~(\text{Mpc})~~~~~\&~~~~~\sigma_{d_{\mathrm{L}}}=\dfrac{\ln(10)}{5}d_{\mathrm{L}}\sigma_{\mu_{\text{SN}}}~~(\text{Mpc})
+$$
+\end{IEEEeqnarray}
+From eq.(\ref{eq:sl10}) it is clear that the luminosity distance can be estimated by knowing the absolute magnitude of supernovae $(M_{\mathrm{B}})$. It is well studied that  type Ia supernovae sample is normally distributed with a mean absolute magnitude of $M_{\mathrm{B}}=-19.25$  \cite{dr2014}. Therefore, we use $M_{\mathrm{B}}=-19.25$ to calculate the luminosity distance and its uncertainty for each supernovae.
+\section{Gamma-Ray Bursts Hubble diagram}
+Gamma Ray Bursts (GRBs) are highly energetic events that occur in the universe and can be detected at a very high redshift due to their high luminosity. To date, the farthest GRB 090429B \cite{ac2011} observed is at $z=9.4$. GRBs are considered  an effective tool to study the universe \cite{li2015, hn2015, hn2016, jj2017}. Several efforts have been made to establish distance measures using some empirical relations of distance-dependent quantities and observables of rest frames \cite{la2008}. We consider the relation between the isotropic equivalent gamma-ray energy $E_{\gamma,\text{iso}}$ and the observed photon energy of the peak spectral flux $E_{\text{p,i}}$ \cite{la2002,la2006}
+ \begin{IEEEeqnarray}{rCl}\label{eq:sl11}
+$$
+\log \left(\dfrac{E_{\gamma,\text {iso }}}{1 \text { erg }}\right)=a \log \left[\dfrac{E_{\mathrm{p}, \mathrm{i}}}{300 \mathrm{keV}}\right] +b
+$$
+\end{IEEEeqnarray}
+ $E_{\mathrm{p}, \mathrm{i}}=E_{\mathrm{p}}(1+z)$ and $a$ and $b$ are, constants. $E_{\text {p,i }}$ and $E_p$ are the spectral peak energy in the cosmological rest-frame of GRBs and in the observer's frame respectively. On the other hand, isotropic equivalent gamma-ray energy $E_{\gamma,\text{iso}}$ can be calculated as
+\begin{IEEEeqnarray}{rCl}\label{eq:sl12}
+$$
+E_{\gamma, \text { iso }}=\dfrac{4 \pi d_{\mathrm{L}}^{2}(z,p) S_{\mathrm{bolo}}}{(1+z)}
+$$
+\end{IEEEeqnarray}
+where $S_{\mathrm{bolo}}$ is the bolometric gamma-ray flux and $p$ represents the parameter sets, i.e. the background cosmological parameters. 
+From eq.(\ref{eq:sl12}), we can calculate the luminosity distance for each GRB. To use GRBs as standard candles], this correlation must be consistently calibrated \cite{mg2008,md2011, md2012, hg2012, sg2014, hn20155}. \\
+We need luminosity distance corresponding to each SGL observations, so  we use SN Ia and GRB data for the same purpose. In order to match redshift of SGL observations and luminosity distance, we fit a second order polynomial\footnote{Higher order polynomial fit doesn't show a substantial deviation from second order polynomial fit.} in a model-independent way on the SN Ia and GRB data. For the fitting we use all the datapoints of the SN Ia data\footnote{We ignore off-diagonal terms in the covariance matrix  of the distance modulus and just focus on the statistical errors.} and only $147$ GRBs out of $162$ (upto a redshift of  $3.6$). The second order polynomial we use is 
+$$
+d_{\mathrm{L}}(z)=d_1z+d_2z^2
+$$
+
+where $d_1$ and $d_2$ are two free parameters and are fit using a python based module \textbf{lmfit}\footnote{https://github.com/lmfit/lmfit-py/}. We find $d_1=4227.53\pm 16.15$ Mpc, $d_2=1996.29\pm 49.05$ Mpc and $\text{cov}(d_1,~d_2)=-0.725$. Fig.\ref{fig:sl1} shows the fitting curve with their $1\sigma$ and $2\sigma$ region along with a theoretical construction of luminosity distance based on the $\Lambda$CDM model.
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=8cm]{Pantheon_GRB_Polynomial_2nd_1048_147_dl}}
+    \caption{Reconstruction of the Luminosity distance $d_L$ in Mpc from SN Ia and GRB datasets upto redshift $3.6$. $68\%$ and $95\%$ confidence levels are represented by red and green shaded regions respectively. Violet and blue points with the error bars represent SN Ia and GRBs datapoints respectively. A solid yellow line represents the luminosity distance for the $\Lambda$CDM model with $H_0=74.03$  $~\text{km sec}^{-1} \text{Mpc}^{-1}$. }
+    \label{fig:sl1}
+\end{figure}
+
+
+
+
+\chapter{Results and Conclusions}
+The cosmological parameters and the lens profile model parameters are determined by maximising the likelihood $\mathcal{L} \sim \exp \left(-\chi^{2} / 2\right)$, where chi-square ($\chi ^2$) is
+\begin{IEEEeqnarray}{rCl}\label{eq:sl14}
+$$
+\chi^{2}\left(\mathbf{p_C}, \mathbf{p_L}\right)=\displaystyle\sum\limits_{i=1}^{n} \dfrac{\left(\mathcal{D}_{th}\left(z_{i} ; \mathbf{p_C}\right)-\mathcal{D}_{o b s}\left(z_{i} ; \mathbf{p_L}\right)\right)^{2}}{\sigma_{\mathcal{D}}\left(z_{i}\right)^{2}}
+$$
+\end{IEEEeqnarray}
+
+Here $\mathbf{p_C}$ and $\mathbf{p_L}$ represent the cosmological parameters and the lens profile parameters respectively. $\mathcal{D}_{th}$ and $\mathcal{D}_{obs}$ are the theoretical and observed quantities of interest, i.e. the distance ratio and time-delay distance. $n$ stands for total number of datapoints used in the analysis. For distance ratio $n=161$ and for time-delay distance, $n=12$.
+
+The two factors which contribute to the uncertainty of $\mathcal{D}$, i.e. $(\sigma_{\mathcal{D}})$ are the uncertainty in the observables of the SGL systems $(\sigma_{\text{SGL}})$ and uncertainty in the luminosity distance $(\sigma_{\text{SC}})$(subscript``SC'' stands for standard candles). We assume that the two uncertainties, i.e. uncertainty of the SGL systems and uncertainty in the luminosity distance are uncorrelated and therefore they add in quadrature; $\sigma_{\mathcal{D}}^{2}=\sigma_{S G L}^{2}+\sigma_{SC}^{2}$.
+\section{Distance Ratio}
+
+\subsection{SIS Lens Profile}
+For the distance ratio part, we start from SIS model of the SGL system. We need two parameters $\Omega_k$ and $f_e$ to describe this model. We obtain the results displays in Table.[\ref{tb:sl1}]. 
+\begin{table}[h!]
+\centering
+\begin{large}
+ \begin{tabular}[b]{| l | r |}\hline
+       Parameter & Best value [68\% C.L.] \\ \hline \hline
+    $\Omega_{k}$ & $0.680^{+0.144}_{-0.136} $ \\ \hline
+   $f_e$ & $1.034^{+0.006}_{-0.006}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{Results from the SIS model: the best-fitted values of $\Omega_k$ and $f_e$ with $68\%$ confidence level }
+\label{tb:sl1}
+\end{table}
+We show the $1D$ and $2D$ posterior distributions for the cosmic curvature $\Omega_k$ and the SGL system parameter $f_e$ in Fig.\ref{fig:sl2}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{distance_Ratio_161_ok_1_fe_corner_without_H0_dec}
+    \caption{$1D$ and $2D$ posterior distributions for the cosmic curvature $\Omega_k$ and $f_e$ of the SIS model.}
+    \label{fig:sl2}
+\end{figure}
+\subsection{PLS Lens Profile}
+In second model of lens galaxy, we consider the power-law spherical model, in which we allow the power law exponent as redshift evolution. The results obtained are shown in Table \ref{tb:sl2}. 
+\begin{table}[h!]
+\centering
+\begin{large}
+    \begin{tabular}[b]{| l | r |}\hline
+       Parameter & Best value [68\% C.L.] \\ \hline \hline
+    $\Omega_{k0}$ & $-0.052^{+0.054}_{-0.050} $ \\ \hline
+   $\gamma_0$ & $2.107^{+0.018}_{-0.020}$ \\ \hline
+   $\gamma_1$ & $-0.371^{+0.088}_{-0.062}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{Results from the PLS model: the best-fitted values of $\Omega_k,~\gamma_0$ and $\gamma_1$ with $68\%$ confidence level }
+\label{tb:sl2}
+\end{table}
+We show the 1D and 2D posterior distributions for the cosmic curvature $\Omega_k$ and the SGL system parameters $\gamma_0$ and $\gamma_1$ in Fig. \ref{fig:sl3}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{distance_Ratio_161_ok_1_ga0_ga1_corner_without_H0_dec}
+    \caption{$1D$ and $2D$ posterior distributions for the cosmic curvature $\Omega_k,~ \gamma_0$ and $\gamma_1$ of the PLS model.}
+    \label{fig:sl3}
+\end{figure}
+\subsection{EPL Lens Profile}
+Extended Power Law profile  is described by two power law indices- power index of total mass density of a lens ($\gamma$ ) and the power index of the luminous density ($\delta$). In this analysis, we discuss three different parametrisations of $\gamma$, while $\delta$ is considered as a free parameter. The luminous density profile of lens is different from the profile of total mass-density $(\gamma\neq\delta)$. 
+\subsubsection{P1: $\gamma_I(z)=\gamma_0$}
+In the first parametrisation, we consider $\gamma$ as an arbitrary constant $(\gamma_0)$. The best fit values of $\Omega_{k0}$ and lens profile parameters are shown in Table \ref{tb:sl3}. \\
+We show 1D and 2D posterior distributions of $\Omega_{k0}$, $\gamma_0$ and $\delta$ in Fig.\ref{fig:sl4}.
+\begin{table}[H]
+\centering
+\begin{large}
+    \begin{tabular}[b]{|c|c|}\hline
+       Parameter & Best value [68\% C.L.] \\ \hline \hline 
+    $\Omega_{k0}$ & $-0.007^{+0.117}_{-0.097}$ \\ \hline
+   $\gamma_0$ & $2.139^{+0.022}_{-0.021}$ \\ \hline
+   $\delta$ & $2.265^{+0.146}_{-0.194}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{Results for EPL model with P1: the best-fit values of $\Omega_{k0},~\gamma_0$ and $\delta$ with $68\%$ confidence level. }
+\label{tb:sl3}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{distance_Ratio_161_ok_1_ga_delt_corner_P1_without_beta_h0_dec}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0},~ \gamma_0$ and $\gamma_1$ for P1 parametrisation of the EPL Model.}
+    \label{fig:sl4}
+\end{figure}
+\subsubsection{P2: $\gamma_{II}(z)=\gamma_0+\gamma_1 z$}
+In the second parametrisation, we consider $\gamma$ as a function of the redshift. The best fit values of $\Omega_{k0}$ and lens profile parameters are given in Table \ref{tb:sl4}.
+\begin{table}[H]
+\centering
+\begin{large}
+    \begin{tabular}[b]{| c | c |}\hline
+       Parameter & Best value [68\% C.L.] \\ \hline \hline
+    $\Omega_{k0}$ & $-0.004^{+0.184}_{-0.118}$ \\ \hline
+   $\gamma_0$ & $2.154^{+0.043}_{-0.034}$ \\ \hline
+   $\gamma_1$ & $-0.037^{+0.075}_{-0.094}$ \\ \hline
+   $\delta$ & $2.108^{+0.221}_{-0.325}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{Results for P2 parametrisation of the EPL model: The best fit values of $\Omega_{k0},~\gamma_0,~\gamma_1$ and $\delta$ with $68\%$ confidence level. }
+\label{tb:sl4}
+\end{table}
+The 1D and 2D posterior distributions of $\Omega_{k0}$, $\gamma_0,~\gamma_1$ and $\delta$ are shown in Fig.\ref{fig:sl5}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth] {distance_Ratio_161_ok_1_ga0_ga1_delt_P2_corner_without_beta_h0_deccc.pdf}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0},~ \gamma_0,~ \gamma_1$ and $\delta$ for P2 parametrisation of EPL Model}
+    \label{fig:sl5}
+\end{figure}
+\subsubsection{P3: $\gamma_{III}(z)=\gamma_0+\gamma_1\dfrac{z_L}{1+z_L}$}
+In the third parametrisation, we consider $\gamma$ as a function of redshift which converges to $\gamma_0$ at high redshift. The best fit values of $\Omega_{k0}$ and lens profile parameters are given in Table \ref{tb:sl5}.
+\begin{table}[H]
+\centering
+\begin{large}
+    \begin{tabular}[b]{| c | c |}\hline
+       Parameter & Best value [68\% C.L.] \\ \hline \hline
+    $\Omega_{k0}$ & $-0.032^{+0.168}_{-0.104}$ \\ \hline
+   $\gamma_0$ & $2.163^{+0.066}_{-0.052}$ \\ \hline
+   $\gamma_1$ & $-0.083^{+0.184}_{-0.243}$ \\ \hline
+   $\delta$ & $2.064^{+0.265}_{-0.353}$ \\ \hline
+    \end{tabular}
+\end{large}
+\caption{Results for P3 parametrisation of the EPL model: The best-fit values of $\Omega_{k0},~\gamma_0,~\gamma_1$ and $\delta$ with $68\%$ confidence level. }
+\label{tb:sl5}
+\end{table}
+1D and 2D posterior distributions of $\Omega_{k0}$, $\gamma_0,~\gamma_1$ and $\delta$ are shown in Fig.\ref{fig:sl6}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth] {distance_Ratio_161_ok_1_ga0_ga1_delt_P3_corner_without_beta_h0_dec}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0},~ \gamma_0,~ \gamma_1$ and $\delta$ for P3 parametrisation of the EPL Model.}
+    \label{fig:sl6}
+\end{figure}
+\newpage
+\section{Time Delay Distance}
+We choose three different parametrisations of the distance duality parameter ($\eta$). 
+\subsection{P1: $\eta_I(z)=\eta_0$}
+For a redshift independent distance duality parameter $(\eta_0)$, the results with best fit values of each parameter are displayed in Table \ref{tb:sl6}.
+
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Dataset} &
+      \multicolumn{2}{c|}{${\text { Best value }[68 \% \mathrm{CL}]}$} \\
+\cline{2-3}
+    &Double-Imaged Dataset & H0LiCOW Dataset \\
+    \hline
+    $\Omega_{k0}$ & $ {0.596_{-0.404}^{+0.287}}$ & $0.881^{+0.027}_{-0.020}$ \\
+    \hline
+    $ \eta_0$ &${0.828_{-0.045}^{+0.055}}$ &$1.641^{+0.253}_{-0.370}$  \\
+       \hline
+  \end{tabular}
+  \caption{  Best fit value of $\Omega_{k0}$ and $\eta_0$ at $68\%$ confidence level obtain from TDD data for $\eta_I=\eta_0$. }
+\label{tb:sl6}
+\end{table}
+
+%
+%
+%
+%\begin{table}[H]
+%\centering
+%\begin{large}
+%     \begin{tabular}[b]{| c | c |}\hline
+%       Parameter & Best value [68\% C.L.] \\ \hline \hline
+%    $\Omega_{k0}$ & $0.596^{+0.287}_{-0.404} $ \\ \hline
+%   $\eta_0$ & $0.828^{+0.055}_{-0.045}$ \\ \hline
+%    \end{tabular}
+%\end{large}
+%\caption{  Best fit value of $\Omega_{k0}$ and $\eta_0$ at $68\%$ confidence level obtain from TDD data for $\eta_I=\eta_0$. }
+%\label{tb:sl6}
+%\end{table}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\textwidth] {rrrr.pdf}
+    \includegraphics[width=0.45\textwidth] {H0LiCOW_P1.pdf}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0}~ \&~ \eta_0$ for $\eta_I=\eta_0$ using double-imaged (left) and H0LiCOW (right) datasets.}
+    \label{fig:sl7}
+\end{figure}
+\subsection{P2: $\eta_{II}(z)=1+\eta_1 z$}
+In this case, we consider a Taylor series expansion of the distance duality parameter to first order. The constraint on the curvature parameter and $\eta_1$ are tabulated in Table \ref{tb:sl7}. 
+\begin{table}[H]
+\centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Dataset} &
+      \multicolumn{2}{c|}{${\text { Best value }[68 \% \mathrm{CL}]}$} \\
+\cline{2-3}
+    &Double-Imaged Dataset & H0LiCOW Dataset \\
+    \hline
+    $\Omega_{k0}$ & $ {0.050_{-0.037}^{+0.077}}$ &  $0.313^{+0.168}_{-0.196}$ \\
+    \hline
+    $ \eta_1$ &$ {0.118_{-0.110}^{+0.137}}$ & $0.249^{+0.173}_{-0.130}$  \\
+       \hline
+  \end{tabular}
+  \caption{Results from the time-delay distance observations  with $\eta_{II}=1+\eta_1z$. Best fit values of $\Omega_{k0}$ and $\eta_1$ with $68\%$ confidence level. }
+\label{tb:sl7}
+\end{table}
+
+We show the $1D$ and $2D$ posterior distributions of $\Omega_{k0}$ and $\eta_1$ in Fig.\ref{fig:sl8}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth] {time_delay_12_GRB_Pantheon_2nd_poly_P2_without_H0.pdf}
+    \includegraphics[width=0.45\textwidth] {H0LiCOW_P2.pdf}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0}~ \&~ \eta_1$ for $\eta_{II}=1+\eta_1z$  using double-imaged (left) and H0LiCOW (right) datasets.  }
+    \label{fig:sl8}
+\end{figure}
+\subsection{P3: $\eta_{III}(z)=1+\eta_1\dfrac{z_L}{1+z_L}$}
+Finally, we consider redshift evolution of the distance duality parameter which converges to $1$ at high redshifts. The constraint on the cosmic curvature parameter and $\eta_1$ are tabulated in Table \ref{tb:sl8}. 
+
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{Dataset} &
+      \multicolumn{2}{c|}{${\text { Best value }[68 \% \mathrm{CL}]}$} \\
+\cline{2-3}
+    &Double-Imaged Dataset & H0LiCOW Dataset \\
+    \hline
+    $\Omega_{k0}$ & $ {0.146_{-0.107}^{+0.209}}$ & $0.113^{+0.197}_{-0.144}$ \\
+    \hline
+    $ \eta_1$ &${-0.418_{-0.192}^{+0.227}}$ &  $0.344^{+0.195}_{-0.185}$  \\
+       \hline
+  \end{tabular}
+  \caption{Results from the time-delay distance observations with $\eta_{III}=1+\eta_1\dfrac{z}{1+z}$. The best fit values of $\Omega_{k0}$ and $\eta_1$ with $68\%$ confidence level. }
+\label{tb:sl8}
+\end{table}
+
+
+
+
+The  $1D$ and $2D$ posterior distributions of $\Omega_{k0}$ and $\eta_1$ are shown in Fig.\ref{fig:sl8}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth] {time_delay_12_GRB_Pantheon_2nd_poly_P3_without_H0.pdf}
+    \includegraphics[width=0.45\textwidth] {H0LiCOW_P3.pdf}
+    \caption{$1D$ and $2D$ posterior distributions of $\Omega_{k0}~ \&~ \eta_1$ for $\eta_{III}$ parametrisation  using double-imaged (left) and H0LiCOW (right) datasets. }
+    \label{fig:sl9}
+\end{figure}
+\section{Conclusions}
+\begin{enumerate}
+\item
+We use DSR along with distance ratio data with the Singular Isothermal Sphere (SIS) and the  Power Law Spherical (PLS) lens profiles. For  the SIS profile, we obtain $\Omega_{k 0}=0.680_{-0.136}^{+0.144}$ and $f_e=1.034_{-0.006}^{+0.006}$. Our constraint on $\Omega_{k0}$ is incompatible with the Planck result. For the PLS lens profile, we find the constraint on the cosmic curvature parameter $\Omega_{k0}=-0.052^{+0.054}_{-0.050}$ which is consistent with a flat universe at $95\%$ confidence level. The best fit values of lens parameters, $\gamma_{0}$ and $\gamma_{1}$, are $2.107_{-0.020}^{+0.018}$ and $-0.371_{-0.062}^{+0.088}$ respectively. Our results indicate that with cosmic time, the total density profile of early-type galaxies can evolve.
+\item
+In the Extended Power Law (EPL) lens model, we have three free parameters: cosmic curvature parameter and two lens parameters, $\gamma$ (power index of total mass-density lens profile) and $\delta$ (power index of luminous density lens profile). We consider three different parametrisations of $\gamma$. In the first parametrisation, $\gamma_I(z)=\gamma_0=\text{constant}$ while in other two, $\gamma$  varies as a function of redshift. For the first parametrisation, we find constraints on the cosmic curvature parameter which support a spatially flat universe at $68\%$ confidence level. The best fit values of $\gamma_0$ and $\delta$ are $2.139$ and $2.265$ respectively indicating that the mass distribution of dark matter is different from the mass distribution of luminous matter. We assume the evolution of $\gamma$ with redshift in two different forms: $\gamma_{II}(z_l)=\gamma_0+\gamma_1z_l$, and $\gamma_{III}(z_l)=\gamma_0+\gamma_1z_l/(1+z_l)$. Both parametrisations of $\gamma$ indicate that there is a marginal evolution of $\gamma$ with redshift. For early galaxies, $\gamma(z)$ and $\delta$ are not identical. This might indicate that the distribution of dark matter and baryonic matter is not the same. In the both parametrisation of $\gamma$, the best fit values of $\Omega_{k0}$ indicate a closed universe but a spatially flat universe is also accommodated at $68\%$ confidence level. Also the posteriors distributions contours of cosmic curvature and lens parameters are very similar, suggesting that limits on curvature parameter are not significantly affected by the choice of parametrisation of the $\gamma$.
+\item
+In the time-delay distance we consider three parametrisations of $\eta$. \\
+\textbf{1. $\eta_I(z)=\eta_0$:} Using double-imaged lensed dataset, the best fit value of $\Omega_{k0}$ suggests an open universe and H0LiCOW dataset also shows an open universe. Both dataset indicate a deviation in CDDR at $68\%$ C.L.\\
+ \textbf{2. $\eta_{II}(z)=1+\eta_1z$:} The obtained value of  $\Omega_{k0}$ from both dataset supports a flat universe at $95\%$ C.L., while the value of distance duality parameter shows no violation $95\%$ C.L.\\
+  \textbf{ 3. $\eta_{III}(z)=1+\eta_1\dfrac{z}{1+z}$:} Again the obtained value of $\Omega_{k0}$  is consistent with a flat universe from double-imaged lensed dataset and H0LiCOW dataset at $95\%$ and $68\%$ C.L. respectively. However the distance duality parameter shows a no violation from double-imaged lensed dataset and H0LiCOW dataset at $99\%$ and $95\%$ C.L. respectively.
+
+
+
+
+%We consider three parametrisations of $\eta$. In the first parametrisation, we take $\eta$ to be independent of redshift $(\eta_I=\eta_0)$, while in other two, we consider $\eta$ as evolving with redshift in two different ways: $\eta_{II}(z)=1+\eta_1z$ and $\eta_{III}(z)=1+\eta_1z/(1+z)$. For the first parametrisation, we obtain $\Omega_{k0}=0.596^{+0.287}_{-0.404}$ which suggests that a spatially flat universe is preferred at $95\%$ confidence level. The value of $\eta$ comes out to be $0.828_{-0.045}^{+0.055}$, indicating a violation in CDDR at $68\%$ confidence level. In the second parametrisation, the obtained value of $\Omega_{k0}$ supports a flat universe at $68\%$ confidence level while the value of distance duality parameter shows no violation $68\%$ confidence level. Further in the third parametrisation, again the obtained value of  $\Omega_{k0}$ is consistent with a flat universe within $68\%$ confidence level however the distance duality parameter shows a violation at $68\%$ confidence level.
+\end{enumerate}
+\chapter{Future Planning}
+%\section{Literature Survey}
+%For the last one years, I studied the Gravitational Lensing. For this work, I started from the Ref.\cite{rn1996}. From this, I learned the strong gravitational lensing. Further, I extended my work to distance distance ratio and time delay in strong gravitational lensing. After these studies, we produced above explained works.
+\section{Cosmology with  Local Inhomogeneity }
+At the present day cosmology, standard model of universe is based on FLRW metric. FLRW metric state that universe is spatially isotropic and homogeneous at large scale. This approximation is well favoured by almost all observations, which helps us to understand the nature of cosmological parameters including dark energy.  But on the other hand, inhomogeneity are still there on the small scale. In my future, I will study the distances in  universe with inhomogeneity because: 
+\vspace{2mm}\\
+$\bullet$ Local inhomogeneities may affect the averaged dynamics,\\
+$\bullet$ Local inhomogeneities affect cosmological observations, becuase photons path effects by inhomogeneities.
+\section{Hubble Phase Space Portrait}
+For future study, I am planning to extend my work with Hubble Phase Space Portrait (HPSP). The HPSP is basically a plot with Hubble parameter and time or redshift derivative of Hubble Parameter. Thus my plan is to study the different trajectories of dark energy models by using observations.
+\newpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\begin{thebibliography}{99}
+
+\bibitem{rk2000} R. K. Barrett and C. A. Clarkson,  Classical and Quantum Gravity \textbf{17} (2000) 5047.
+
+\bibitem{jc2014}  O. Lahav, Structure Formation in the Universe. Springer  (2001) 131.
+
+\bibitem{ae1915} A. Einstein, Math. Phys. \textbf{1915} (1915) 844.
+
+\bibitem{ag1998} A. G. Riess  et al. ,  AJ \textbf{116} (1998) 1009.
+
+\bibitem{sp1998} S. Perlmutter et al. ,  ApJ \textbf{517} (1999) 565.
+
+\bibitem{sr2015} S. R$\ddot{a}$s$\ddot{a}$nen, K. Bolejko and A. Finoguenov,  Phys. Rev. Lett. \textbf{115} (2015) 101301.
+
+\bibitem{pj1993} P. J. E. Peebles, Principles of physical cosmology, Princeton University Press, 1993.
+
+\bibitem{df2013} D. Foreman-Mackey et al., Publications of the Astronomical Society of the Pacific \textbf{125} (2013) 306.
+
+\bibitem{rn1996}  R. Narayan, and M. Bartelmann,  arXiv preprint astro-ph/9606001 (1996).
+
+\bibitem{sl1992} P. Schneider, J. Ehlers, and E. E. Falco, Gravitational Lenses, Springer, 1992.
+
+\bibitem{ds2006}  D. Sivia and  J. Skilling, Data analysis: a Bayesian tutorial, OUP Oxford 2006.
+
+\bibitem{yc2019} Y. Chen et al.,  Mon. Not. Roy. Astron. Soc. \textbf{488} (2019) 3745.
+
+\bibitem{lv20022} L. V. E.  Koopmans and T. Treu,  ApJ \textbf{568} (2002) L5.
+
+\bibitem{lv2003} L. V. E.  Koopmans and T. Treu,  ApJ \textbf{583} (2003) 606.
+
+\bibitem{tt2002} T. Treu and L. V. E. Koopmans,  ApJ \textbf{575} (2002) 87.
+
+\bibitem{tt2004} T. Treu and L. V. E. Koopmans, ApJ \textbf{611} (2004) 739.
+
+\bibitem{aj2011} A. J. Ruff et al. , ApJ \textbf{727} (2011) 96.
+
+\bibitem{as2013}  Alessandro Sonnenfeld et al. ,  ApJ \textbf{777} (2013) 98.
+
+\bibitem{as2015} A. Sonnenfeld et al. ,  ApJ \textbf{800} (2015) 94.
+
+\bibitem{as20088} A. S. Bolton et al. ,  ApJ \textbf{682} (2008) 964.
+
+\bibitem{mw2009} M. W. Auger et al. ,  ApJ \textbf{705} (2009) 1099.
+
+\bibitem{mw2010} M. W. Auger et al. ,  ApJ \textbf{724} (2010) 511.
+ 
+\bibitem{ys2015} Y. Shu et al. ,  ApJ \textbf{803} (2015) 71.
+
+\bibitem{ys2017} Y. Shu et al. ,  ApJ \textbf{851} (2017) 48.
+
+\bibitem{jr2011} J. R. Brownstein et al. ,  ApJ \textbf{744} (2011) 41.
+
+\bibitem{ys2016} Y. Shu et al. ,  ApJ \textbf{824} (2016) 86.
+
+\bibitem{ys20166} Y. Shu et al. ,  ApJ  \textbf{833} (2016) 264.
+%%
+\bibitem{ib2013} I. Balmes and P. S. Corasaniti,   Mon. Not. Roy. Astron. Soc. \textbf{431} (2013) 1528.
+
+%\bibitem{jj20144} J. J. Wei, X. F. Wu, and F. Melia, \emph{``A comparison of cosmological models using time delay lenses."} ApJ \textbf{788} (2014) 190.
+
+\bibitem{ij2015} I. Jee, E. Komatsu and S. H. Suyu, JCAP \textbf{11} (2015) 033.
+
+\bibitem{cc2015}  C. C. Yuan and F. Y. Wang,  Mon. Not. Roy. Astron. Soc. \textbf{452} (2015) 2423.
+
+\bibitem{kc2019} K. C. Wong et al.,  Mon. Not. Roy. Astron. Soc. \textbf{498} (2020) 1420.
+
+\bibitem{jj2020} J. J. Wei and F. Melia, arXiv:2005.10422 (2020).
+
+\bibitem{dp2009} D .Paraficz and J. Hjorth, A\&A \textbf{507} (2009) L49.
+%%
+%\bibitem{sc2012} Shuo Cao et al. ,  JCAP 2012.03 (2012): 016.
+
+\bibitem{dm2018} D. M. Scolnic et al. ,  ApJ \textbf{859} (2018) 101.
+
+\bibitem{jg2010} J. Guy et al. , A\&A \textbf{523} (2010) A7.
+
+\bibitem{dr2014} D. Richardson et al. , AJ \textbf{147} (2014) 118.
+
+\bibitem{ac2011} A. Cucchiara et al. , ApJ \textbf{736} (2011) 7.
+
+\bibitem{li2015} L. Izzo et al. ,  A\&A \textbf{582} (2015) A115.
+
+\bibitem{hn2015} H. N. Lin, X. Li and Z. Chang,   Mon. Not. Roy. Astron. Soc. \textbf{455} (2015) 2131.
+
+\bibitem{hn2016}H. N. Lin, X. Li and Z. Chang,   Mon. Not. Roy. Astron. Soc. \textbf{459} (2016) 2501.
+
+\bibitem{jj2017} J. J. Wei and X. F. Wu,  Int. J Mod. Phys. D \textbf{26} (2017) 1730002.
+
+\bibitem{la2008} L. Amati et al. ,   Mon. Not. Roy. Astron. Soc. \textbf{391} (2008) 577.
+ 
+\bibitem{la2002} L. Amati et al. ,  A\&A \textbf{390} (2002) 81.
+
+\bibitem{la2006} L. Amati,  Mon. Not. Roy. Astron. Soc. \textbf{372} (2006) 233.
+
+\bibitem{mg2008} M. G. Dainotti, V. F. Cardone and S. Capozziello,  Mon. Not. Roy. Astron. Soc. \textbf{391} (2008) L79.
+\
+\bibitem{md2011} M. Demianski, E. Piedipalumbo and C. Rubano,  Mon. Not. Roy. Astron. Soc. \textbf{411} (2011) 1213.
+
+\bibitem{md2012} M. Demianski et al. ,  Mon. Not. Roy. Astron. Soc. \textbf{426} (2012) 1396.
+
+\bibitem{hg2012} H. Gao, N. Liang and  Z. H. Zhu,  Int. J Mod. Phys. D \textbf{21} (2012) 1250016.
+
+\bibitem{sg2014} S. Postnikov et al. , ApJ \textbf{783} (2014) 126.
+
+\bibitem{hn20155} H. N. Lin et al. ,  Mon. Not. Roy. Astron. Soc. \textbf{453} (2015) 128.
+
+%\bibitem{md2017}  M. Demianski et al. ,  A\&A \textbf{598} (2017) A112.
+
+
+
+\end{thebibliography}
+\end{document}
